@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Location = "my" | "kz" | "flight";
 
@@ -220,19 +220,11 @@ const badgeLabels: Record<Location, string> = {
 };
 
 export default function Home() {
-  const [checked, setChecked] = useState<Record<string, boolean>>(() => {
-    if (typeof window === "undefined") {
-      return {};
-    }
-
-    try {
-      const saved = window.localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : {};
-    } catch {
-      return {};
-    }
-  });
+  const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [filter, setFilter] = useState<"all" | Location>("all");
+  const [navVisible, setNavVisible] = useState(true);
+  const [storageReady, setStorageReady] = useState(false);
+  const lastScrollY = useRef(0);
 
   const total = useMemo(
     () => groups.reduce((sum, group) => sum + group.items.length, 0),
@@ -240,14 +232,64 @@ export default function Home() {
   );
   const checkedCount = Object.values(checked).filter(Boolean).length;
   const progress = total ? (checkedCount / total) * 100 : 0;
+  const remainingCount = total - checkedCount;
+  const activeFilterLabel =
+    filters.find((item) => item.key === filter)?.label ?? "Все";
+  const visibleTotal = groups.reduce(
+    (sum, group) =>
+      sum +
+      group.items.filter((item) => filter === "all" || item.loc === filter)
+        .length,
+    0,
+  );
 
   useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      try {
+        const saved = window.localStorage.getItem(STORAGE_KEY);
+        setChecked(saved ? JSON.parse(saved) : {});
+      } catch {
+        setChecked({});
+      } finally {
+        setStorageReady(true);
+      }
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
+  useEffect(() => {
+    if (!storageReady) {
+      return;
+    }
+
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
     } catch {
       // localStorage can be unavailable in private browsing modes.
     }
-  }, [checked]);
+  }, [checked, storageReady]);
+
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollY.current;
+
+      if (currentScrollY < 24) {
+        setNavVisible(true);
+      } else if (Math.abs(delta) > 8) {
+        setNavVisible(delta < 0);
+      }
+
+      lastScrollY.current = currentScrollY;
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function toggleItem(id: string, value: boolean) {
     setChecked((current) => ({ ...current, [id]: value }));
@@ -262,128 +304,270 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-3xl px-4 py-4 sm:px-6 sm:py-8">
-      <header>
-        <h1 className="text-xl font-semibold leading-tight">
-          IMAS — документы на визу
-        </h1>
-        <p className="mt-1 text-[13px] leading-5 text-[#6b6a64]">
-          Едут мама и сын, спонсор — мама. Зелёная метка — делается уже в
-          Малайзии, фиолетовая — до вылета, оранжевая — перед посадкой на рейс.
-        </p>
-      </header>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_34%,#f3f4f2_100%)]">
+      <nav
+        className={[
+          "fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/85 backdrop-blur-xl transition-transform duration-300",
+          navVisible ? "translate-y-0" : "-translate-y-full",
+        ].join(" ")}
+      >
+        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+          <div className="min-w-0">
+            <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
+              IMAS
+            </p>
+            <p className="truncate text-sm font-semibold text-[#1a1a18] sm:text-base">
+              Документы на визу
+            </p>
+          </div>
+          <div className="hidden items-center gap-2 rounded-full border border-[#e3e1d8] bg-[#f8f7f2] p-1 md:flex">
+            {filters.map((item) => {
+              const active = filter === item.key;
 
-      <section className="mt-4 flex items-center gap-3 rounded-xl border border-[#e3e1d8] bg-white px-4 py-3.5">
-        <div className="h-2 flex-1 overflow-hidden rounded bg-[#eeece4]">
-          <div
-            className="h-full rounded bg-[#2e7d5b] transition-[width] duration-200"
-            style={{ width: `${progress}%` }}
-          />
+              return (
+                <button
+                  key={item.key}
+                  type="button"
+                  onClick={() => setFilter(item.key)}
+                  className={[
+                    "rounded-full px-3 py-2 text-xs font-semibold transition-colors",
+                    active
+                      ? "bg-[#1a1a18] text-white"
+                      : "text-[#6b6a64] hover:bg-white hover:text-[#1a1a18]",
+                  ].join(" ")}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
+          <div className="flex items-center gap-2 rounded-full bg-[#1a1a18] px-3 py-2 text-xs font-semibold text-white shadow-sm">
+            <span>{checkedCount}</span>
+            <span className="text-white/45">/</span>
+            <span>{total}</span>
+          </div>
         </div>
-        <div className="min-w-14 text-right text-sm font-semibold">
-          {checkedCount} / {total}
-        </div>
-      </section>
-
-      <nav className="mt-3 flex gap-2 overflow-x-auto pb-1">
-        {filters.map((item) => {
-          const active = filter === item.key;
-
-          return (
-            <button
-              key={item.key}
-              type="button"
-              onClick={() => setFilter(item.key)}
-              className={[
-                "shrink-0 rounded-full border px-3.5 py-2 text-[13px] font-semibold transition-colors",
-                active
-                  ? "border-[#1a1a18] bg-[#1a1a18] text-white"
-                  : "border-[#e3e1d8] bg-white text-[#6b6a64]",
-              ].join(" ")}
-            >
-              {item.label}
-            </button>
-          );
-        })}
       </nav>
 
-      <div className="mt-3">
-        {groups.map((group) => {
-          const visibleItems = group.items
-            .map((item, index) => ({ ...item, id: `${group.key}_${index}` }))
-            .filter((item) => filter === "all" || item.loc === filter);
+      <main className="mx-auto w-full max-w-6xl px-4 pb-8 pt-20 sm:px-6 sm:pb-12 lg:px-8">
+        <section className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-stretch">
+          <div className="rounded-[28px] border border-white/70 bg-[#1d2a22] p-5 text-white shadow-[0_24px_70px_rgba(29,42,34,0.16)] sm:p-7 lg:p-8">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-white/12 px-3 py-1 text-xs font-semibold text-white/85">
+                Мама + сын
+              </span>
+              <span className="rounded-full bg-[#d8efe0] px-3 py-1 text-xs font-semibold text-[#1f6b3f]">
+                Спонсор — мама
+              </span>
+            </div>
+            <h1 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+              IMAS — документы на визу
+            </h1>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-white/72 sm:text-base">
+              Собранный чек-лист по визе студента и опекуна: что готовить до
+              вылета, что делать уже в Малайзии и что закрыть перед рейсом.
+            </p>
 
-          if (visibleItems.length === 0) {
-            return null;
-          }
-
-          return (
-            <section key={group.key} className="mt-6">
-              <h2 className="mb-2 text-[15px] font-semibold leading-tight">
-                {group.title}
-              </h2>
-              <div className="overflow-hidden rounded-xl border border-[#e3e1d8] bg-white">
-                {visibleItems.map((item) => {
-                  const isChecked = Boolean(checked[item.id]);
-
-                  return (
-                    <label
-                      key={item.id}
-                      htmlFor={item.id}
-                      className={[
-                        "flex cursor-pointer items-start gap-2.5 border-b border-[#eeece4] px-3.5 py-3 last:border-b-0",
-                        isChecked ? "bg-[#f2f8f4]" : "bg-white",
-                      ].join(" ")}
-                    >
-                      <input
-                        id={item.id}
-                        type="checkbox"
-                        checked={isChecked}
-                        onChange={(event) =>
-                          toggleItem(item.id, event.target.checked)
-                        }
-                        className="mt-0.5 size-5 shrink-0 accent-[#2e7d5b]"
-                      />
-                      <span className="flex flex-col gap-1">
-                        <span
-                          className={[
-                            "w-fit rounded-full px-2 py-0.5 text-[11px] font-semibold",
-                            badgeClasses[item.loc],
-                          ].join(" ")}
-                        >
-                          {badgeLabels[item.loc]}
-                        </span>
-                        <span
-                          className={[
-                            "text-sm leading-5",
-                            isChecked
-                              ? "text-[#6b6a64] line-through"
-                              : "text-[#1a1a18]",
-                          ].join(" ")}
-                        >
-                          {item.text}
-                        </span>
-                      </span>
-                    </label>
-                  );
-                })}
+            <div className="mt-8 grid grid-cols-3 gap-2 sm:max-w-xl sm:gap-3">
+              <div className="rounded-2xl bg-white/10 p-3">
+                <p className="text-2xl font-semibold">{checkedCount}</p>
+                <p className="mt-1 text-[11px] font-medium text-white/58">
+                  готово
+                </p>
               </div>
-            </section>
-          );
-        })}
-      </div>
+              <div className="rounded-2xl bg-white/10 p-3">
+                <p className="text-2xl font-semibold">{remainingCount}</p>
+                <p className="mt-1 text-[11px] font-medium text-white/58">
+                  осталось
+                </p>
+              </div>
+              <div className="rounded-2xl bg-white/10 p-3">
+                <p className="text-2xl font-semibold">
+                  {Math.round(progress)}%
+                </p>
+                <p className="mt-1 text-[11px] font-medium text-white/58">
+                  прогресс
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <button
-        type="button"
-        onClick={resetItems}
-        className="mt-6 w-full rounded-xl border border-[#e3e1d8] bg-white p-3.5 text-[15px] font-semibold text-[#a33b3b]"
-      >
-        Сбросить все отметки
-      </button>
-      <p className="mt-2 pb-6 text-center text-xs leading-5 text-[#9b9a92]">
-        Данные хранятся локально в этом браузере (localStorage). Если очистить
-        историю браузера, отметки удалятся.
-      </p>
-    </main>
+          <aside className="rounded-[28px] border border-[#e4e0d6] bg-white/85 p-5 shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase text-[#8b877b]">
+                  Статус
+                </p>
+                <p className="mt-1 text-2xl font-semibold text-[#1a1a18]">
+                  {checkedCount} из {total}
+                </p>
+              </div>
+              <div className="grid size-16 place-items-center rounded-full bg-[#edf6ef] text-sm font-bold text-[#2e7d5b]">
+                {Math.round(progress)}%
+              </div>
+            </div>
+
+            <div className="mt-5 h-3 overflow-hidden rounded-full bg-[#ebe8dd]">
+              <div
+                className="h-full rounded-full bg-[#2e7d5b] transition-[width] duration-300"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+
+            <div className="mt-5 grid grid-cols-3 gap-2 text-center">
+              <div className="rounded-2xl bg-[#f2f8f4] p-3">
+                <p className="text-lg font-semibold text-[#1f6b3f]">
+                  {groups.flatMap((group) => group.items).filter((item) => item.loc === "my").length}
+                </p>
+                <p className="mt-1 text-[11px] font-semibold text-[#6b6a64]">
+                  MY
+                </p>
+              </div>
+              <div className="rounded-2xl bg-[#f1effb] p-3">
+                <p className="text-lg font-semibold text-[#4a3fa8]">
+                  {groups.flatMap((group) => group.items).filter((item) => item.loc === "kz").length}
+                </p>
+                <p className="mt-1 text-[11px] font-semibold text-[#6b6a64]">
+                  KZ
+                </p>
+              </div>
+              <div className="rounded-2xl bg-[#fff0e2] p-3">
+                <p className="text-lg font-semibold text-[#a85b17]">
+                  {groups.flatMap((group) => group.items).filter((item) => item.loc === "flight").length}
+                </p>
+                <p className="mt-1 text-[11px] font-semibold text-[#6b6a64]">
+                  Рейс
+                </p>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section className="sticky top-[72px] z-30 mt-4 rounded-2xl border border-[#e4e0d6] bg-white/90 p-2 shadow-sm backdrop-blur md:hidden">
+          <div className="flex gap-2 overflow-x-auto">
+            {filters.map((item) => {
+              const active = filter === item.key;
+
+              return (
+                <button
+                  key={item.key}
+                  type="button"
+                  onClick={() => setFilter(item.key)}
+                  className={[
+                    "shrink-0 rounded-xl px-3.5 py-2.5 text-[13px] font-semibold transition-colors",
+                    active
+                      ? "bg-[#1a1a18] text-white"
+                      : "bg-[#f6f4ed] text-[#6b6a64]",
+                  ].join(" ")}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="mt-5 flex flex-col gap-3 rounded-3xl border border-[#e4e0d6] bg-white/70 p-3 shadow-[0_18px_50px_rgba(42,38,26,0.06)] backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:p-4">
+          <div>
+            <p className="text-xs font-bold uppercase text-[#8b877b]">
+              Сейчас показано
+            </p>
+            <p className="mt-1 text-lg font-semibold text-[#1a1a18]">
+              {activeFilterLabel}: {visibleTotal} пунктов
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={resetItems}
+            className="rounded-2xl border border-[#ead5d5] bg-white px-4 py-3 text-sm font-semibold text-[#a33b3b] transition-colors hover:bg-[#fff6f6]"
+          >
+            Сбросить отметки
+          </button>
+        </section>
+
+        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+          {groups.map((group) => {
+            const visibleItems = group.items
+              .map((item, index) => ({ ...item, id: `${group.key}_${index}` }))
+              .filter((item) => filter === "all" || item.loc === filter);
+
+            if (visibleItems.length === 0) {
+              return null;
+            }
+
+            return (
+              <section
+                key={group.key}
+                className="overflow-hidden rounded-3xl border border-[#e4e0d6] bg-white shadow-[0_18px_45px_rgba(42,38,26,0.05)]"
+              >
+                <div className="border-b border-[#eeece4] bg-[#fbfaf6] px-4 py-3.5 sm:px-5">
+                  <div className="flex items-center justify-between gap-3">
+                    <h2 className="text-[15px] font-semibold leading-snug text-[#1a1a18] sm:text-base">
+                      {group.title}
+                    </h2>
+                    <span className="shrink-0 rounded-full bg-[#eeece4] px-2.5 py-1 text-xs font-semibold text-[#6b6a64]">
+                      {visibleItems.length}
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  {visibleItems.map((item) => {
+                    const isChecked = Boolean(checked[item.id]);
+
+                    return (
+                      <label
+                        key={item.id}
+                        htmlFor={item.id}
+                        className={[
+                          "group flex min-h-20 cursor-pointer items-start gap-3 border-b border-[#eeece4] px-4 py-4 transition-colors last:border-b-0 sm:px-5",
+                          isChecked
+                            ? "bg-[#f2f8f4]"
+                            : "bg-white hover:bg-[#fbfaf6]",
+                        ].join(" ")}
+                      >
+                        <input
+                          id={item.id}
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={(event) =>
+                            toggleItem(item.id, event.target.checked)
+                          }
+                          className="mt-1 size-5 shrink-0 accent-[#2e7d5b]"
+                        />
+                        <span className="flex min-w-0 flex-1 flex-col gap-2">
+                          <span
+                            className={[
+                              "w-fit rounded-full px-2.5 py-1 text-[11px] font-bold",
+                              badgeClasses[item.loc],
+                            ].join(" ")}
+                          >
+                            {badgeLabels[item.loc]}
+                          </span>
+                          <span
+                            className={[
+                              "text-sm leading-6 sm:text-[15px]",
+                              isChecked
+                                ? "text-[#77746b] line-through"
+                                : "text-[#24231f]",
+                            ].join(" ")}
+                          >
+                            {item.text}
+                          </span>
+                        </span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+
+        <p className="mx-auto mt-6 max-w-xl pb-6 text-center text-xs leading-5 text-[#8b877b]">
+          Данные хранятся локально в этом браузере. Если очистить историю
+          браузера, отметки удалятся.
+        </p>
+      </main>
+    </div>
   );
 }
