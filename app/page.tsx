@@ -1,6 +1,8 @@
 "use client";
 
+import type { Session, SupabaseClient } from "@supabase/supabase-js";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createClient } from "@/lib/supabase/client";
 
 type Location = "my" | "kz" | "flight";
 
@@ -16,6 +18,9 @@ type ChecklistGroup = {
 };
 
 const STORAGE_KEY = "imas_visa_checklist_state";
+
+type CheckedState = Record<string, boolean>;
+type SyncStatus = "local" | "loading" | "saving" | "saved" | "error";
 
 const groups: ChecklistGroup[] = [
   {
@@ -219,12 +224,88 @@ const badgeLabels: Record<Location, string> = {
   flight: "Перед рейсом",
 };
 
+function normalizeChecked(value: unknown): CheckedState {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return {};
+  }
+
+  return Object.fromEntries(
+    Object.entries(value).filter(([, checked]) => checked === true),
+  );
+}
+
+function readLocalChecked(): CheckedState {
+  try {
+    return normalizeChecked(
+      JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? "{}"),
+    );
+  } catch {
+    return {};
+  }
+}
+
+function writeLocalChecked(checked: CheckedState) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+  } catch {
+    // localStorage can be unavailable in private browsing modes.
+  }
+}
+
+function getUserLabel(session: Session | null) {
+  return (
+    session?.user.user_metadata.full_name ??
+    session?.user.user_metadata.name ??
+    session?.user.email ??
+    "Аккаунт"
+  );
+}
+
+async function loadRemoteChecked(
+  supabase: SupabaseClient,
+  userId: string,
+): Promise<CheckedState> {
+  const { data, error } = await supabase
+    .from("checklist_progress")
+    .select("checked")
+    .eq("user_id", userId)
+    .maybeSingle();
+
+  if (error) {
+    throw error;
+  }
+
+  return normalizeChecked(data?.checked);
+}
+
+async function saveRemoteChecked(
+  supabase: SupabaseClient,
+  userId: string,
+  checked: CheckedState,
+) {
+  const { error } = await supabase.from("checklist_progress").upsert({
+    user_id: userId,
+    checked,
+  });
+
+  if (error) {
+    throw error;
+  }
+}
+
 export default function Home() {
-  const [checked, setChecked] = useState<Record<string, boolean>>({});
+  const [checked, setChecked] = useState<CheckedState>({});
   const [filter, setFilter] = useState<"all" | Location>("all");
   const [navVisible, setNavVisible] = useState(true);
   const [storageReady, setStorageReady] = useState(false);
+  const [supabase] = useState(() => createClient());
+  const [session, setSession] = useState<Session | null>(null);
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>(() =>
+    supabase ? "loading" : "local",
+  );
+  const [authReady, setAuthReady] = useState(() => !supabase);
   const lastScrollY = useRef(0);
+  const remoteReady = useRef(false);
 
   const total = useMemo(
     () => groups.reduce((sum, group) => sum + group.items.length, 0),
@@ -242,33 +323,136 @@ export default function Home() {
         .length,
     0,
   );
+  const sessionUserId = session?.user.id;
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      try {
-        const saved = window.localStorage.getItem(STORAGE_KEY);
-        setChecked(saved ? JSON.parse(saved) : {});
-      } catch {
-        setChecked({});
-      } finally {
-        setStorageReady(true);
-      }
+      setChecked(readLocalChecked());
+      setStorageReady(true);
     });
 
     return () => window.cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {
-    if (!storageReady) {
+    if (!supabase) {
       return;
     }
 
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
-    } catch {
-      // localStorage can be unavailable in private browsing modes.
+    const client = supabase;
+    let active = true;
+
+    async function initializeAuth() {
+      const { data } = await client.auth.getSession();
+
+      if (!active) {
+        return;
+      }
+
+      setSession(data.session);
+      setAuthReady(true);
+
+      if (!data.session) {
+        setSyncStatus("local");
+      }
     }
-  }, [checked, storageReady]);
+
+    initializeAuth();
+
+    const {
+      data: { subscription },
+    } = client.auth.onAuthStateChange((_event, nextSession) => {
+      setSession(nextSession);
+      remoteReady.current = false;
+
+      if (!nextSession) {
+        setSyncStatus("local");
+      }
+    });
+
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
+
+  useEffect(() => {
+    if (!storageReady || !authReady || sessionUserId) {
+      return;
+    }
+
+    writeLocalChecked(checked);
+  }, [authReady, checked, sessionUserId, storageReady]);
+
+  useEffect(() => {
+    if (!storageReady || !authReady || !sessionUserId || !supabase) {
+      return;
+    }
+
+    if (remoteReady.current) {
+      return;
+    }
+
+    const client = supabase;
+    const userId = sessionUserId;
+    let active = true;
+
+    async function hydrateRemoteState() {
+      setSyncStatus("loading");
+
+      try {
+        const remoteChecked = await loadRemoteChecked(client, userId);
+        const localChecked = readLocalChecked();
+        const mergedChecked = { ...remoteChecked, ...localChecked };
+
+        if (!active) {
+          return;
+        }
+
+        setChecked(mergedChecked);
+
+        if (Object.keys(localChecked).length > 0) {
+          await saveRemoteChecked(client, userId, mergedChecked);
+          window.localStorage.removeItem(STORAGE_KEY);
+        }
+
+        remoteReady.current = true;
+        setSyncStatus("saved");
+      } catch {
+        if (active) {
+          setSyncStatus("error");
+        }
+      }
+    }
+
+    hydrateRemoteState();
+
+    return () => {
+      active = false;
+    };
+  }, [authReady, sessionUserId, storageReady, supabase]);
+
+  useEffect(() => {
+    if (!storageReady || !authReady || !sessionUserId || !supabase) {
+      return;
+    }
+
+    if (!remoteReady.current) {
+      return;
+    }
+
+    const client = supabase;
+    const userId = sessionUserId;
+    setSyncStatus("saving");
+
+    const timeout = window.setTimeout(() => {
+      saveRemoteChecked(client, userId, checked)
+        .then(() => setSyncStatus("saved"))
+        .catch(() => setSyncStatus("error"));
+    }, 450);
+
+    return () => window.clearTimeout(timeout);
+  }, [authReady, checked, sessionUserId, storageReady, supabase]);
 
   useEffect(() => {
     lastScrollY.current = window.scrollY;
@@ -292,7 +476,15 @@ export default function Home() {
   }, []);
 
   function toggleItem(id: string, value: boolean) {
-    setChecked((current) => ({ ...current, [id]: value }));
+    setChecked((current) => {
+      if (value) {
+        return { ...current, [id]: true };
+      }
+
+      const next = { ...current };
+      delete next[id];
+      return next;
+    });
   }
 
   function resetItems() {
@@ -302,6 +494,41 @@ export default function Home() {
 
     setChecked({});
   }
+
+  async function signInWithGoogle() {
+    if (!supabase) {
+      setSyncStatus("error");
+      return;
+    }
+
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+  }
+
+  async function signOut() {
+    if (!supabase) {
+      return;
+    }
+
+    await supabase.auth.signOut();
+    remoteReady.current = false;
+    setSession(null);
+    setSyncStatus("local");
+    setChecked(readLocalChecked());
+  }
+
+  const userLabel = getUserLabel(session);
+  const syncLabel: Record<SyncStatus, string> = {
+    local: "Локально",
+    loading: "Загрузка",
+    saving: "Сохраняю",
+    saved: "Сохранено",
+    error: "Ошибка синхронизации",
+  };
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_34%,#f3f4f2_100%)]">
@@ -341,10 +568,35 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="flex items-center gap-2 rounded-full bg-[#1a1a18] px-3 py-2 text-xs font-semibold text-white shadow-sm">
-            <span>{checkedCount}</span>
-            <span className="text-white/45">/</span>
-            <span>{total}</span>
+          <div className="flex items-center gap-2">
+            {session ? (
+              <div className="hidden items-center gap-2 rounded-full border border-[#e3e1d8] bg-white px-2 py-1.5 sm:flex">
+                <span className="max-w-36 truncate pl-2 text-xs font-semibold text-[#1a1a18]">
+                  {userLabel}
+                </span>
+                <button
+                  type="button"
+                  onClick={signOut}
+                  className="rounded-full bg-[#f3f1ea] px-3 py-1.5 text-xs font-semibold text-[#6b6a64] transition-colors hover:bg-[#ebe8dd] hover:text-[#1a1a18]"
+                >
+                  Выйти
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={signInWithGoogle}
+                disabled={!supabase}
+                className="hidden rounded-full border border-[#e3e1d8] bg-white px-3 py-2 text-xs font-semibold text-[#1a1a18] shadow-sm transition-colors hover:bg-[#f8f7f2] disabled:cursor-not-allowed disabled:opacity-50 sm:block"
+              >
+                Войти Google
+              </button>
+            )}
+            <div className="flex items-center gap-2 rounded-full bg-[#1a1a18] px-3 py-2 text-xs font-semibold text-white shadow-sm">
+              <span>{checkedCount}</span>
+              <span className="text-white/45">/</span>
+              <span>{total}</span>
+            </div>
           </div>
         </div>
       </nav>
@@ -439,6 +691,46 @@ export default function Home() {
                   Рейс
                 </p>
               </div>
+            </div>
+
+            <div className="mt-5 rounded-2xl border border-[#eeece4] bg-[#fbfaf6] p-3">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase text-[#8b877b]">
+                    Синхронизация
+                  </p>
+                  <p className="mt-1 truncate text-sm font-semibold text-[#1a1a18]">
+                    {session ? userLabel : "Гость"}
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-[#6b6a64]">
+                    {syncLabel[syncStatus]}
+                  </p>
+                </div>
+                {session ? (
+                  <button
+                    type="button"
+                    onClick={signOut}
+                    className="shrink-0 rounded-xl bg-white px-3 py-2 text-xs font-semibold text-[#6b6a64] ring-1 ring-[#e3e1d8] transition-colors hover:bg-[#f3f1ea] hover:text-[#1a1a18]"
+                  >
+                    Выйти
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={signInWithGoogle}
+                    disabled={!supabase}
+                    className="shrink-0 rounded-xl bg-[#1a1a18] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#2f2f2b] disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Google
+                  </button>
+                )}
+              </div>
+              {!supabase ? (
+                <p className="mt-3 rounded-xl bg-[#fff0e2] p-2 text-xs leading-5 text-[#8a531d]">
+                  Supabase env vars пока не настроены. Данные сохраняются только
+                  в этом браузере.
+                </p>
+              ) : null}
             </div>
           </aside>
         </section>
@@ -564,8 +856,9 @@ export default function Home() {
         </div>
 
         <p className="mx-auto mt-6 max-w-xl pb-6 text-center text-xs leading-5 text-[#8b877b]">
-          Данные хранятся локально в этом браузере. Если очистить историю
-          браузера, отметки удалятся.
+          {session
+            ? "Данные сохраняются в аккаунте и будут доступны после входа на другом устройстве."
+            : "Без входа данные хранятся локально в этом браузере. После входа через Google отметки перенесутся в аккаунт."}
         </p>
       </main>
     </div>
