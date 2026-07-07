@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "IMAS — документы на визу",
-  description: "Чек-лист документов для визы студента и опекуна IMAS.",
+  title: "Malaysia-help",
+  description: "Чек-лист документов для визы студента и опекуна.",
 };
 
 export default function RootLayout({

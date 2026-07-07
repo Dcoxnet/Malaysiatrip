@@ -1,6 +1,7 @@
 "use client";
 
 import type { Session, SupabaseClient } from "@supabase/supabase-js";
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
@@ -516,17 +517,14 @@ export default function Home() {
 
   if (!authReady) {
     return (
-      <main className="grid min-h-screen place-items-center bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_42%,#f3f4f2_100%)] px-4">
-        <section className="w-full max-w-sm rounded-3xl border border-[#e4e0d6] bg-white/85 p-6 text-center shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
-          <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
-            IMAS
+      <main className="grid min-h-screen place-items-center bg-[#f7f5ed] px-4">
+        <section className="w-full max-w-sm rounded-[28px] border border-[#ded9cc] bg-white/90 p-7 text-center shadow-[0_24px_80px_rgba(35,31,22,0.12)]">
+          <p className="text-xs font-bold text-[#2e7d5b]">
+            Malaysia-help
           </p>
           <h1 className="mt-3 text-2xl font-semibold text-[#1a1a18]">
-            Загружаем сессию
+            Загрузка
           </h1>
-          <p className="mt-3 text-sm leading-6 text-[#6b6a64]">
-            Проверяем авторизацию перед открытием чек-листа.
-          </p>
         </section>
       </main>
     );
@@ -534,10 +532,10 @@ export default function Home() {
 
   if (!supabase) {
     return (
-      <main className="grid min-h-screen place-items-center bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_42%,#f3f4f2_100%)] px-4">
-        <section className="w-full max-w-md rounded-3xl border border-[#e4e0d6] bg-white/85 p-6 shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
-          <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
-            IMAS
+      <main className="grid min-h-screen place-items-center bg-[#f7f5ed] px-4">
+        <section className="w-full max-w-md rounded-[28px] border border-[#ded9cc] bg-white/90 p-7 shadow-[0_24px_80px_rgba(35,31,22,0.12)]">
+          <p className="text-xs font-bold text-[#2e7d5b]">
+            Malaysia-help
           </p>
           <h1 className="mt-3 text-2xl font-semibold text-[#1a1a18]">
             Авторизация не настроена
@@ -553,31 +551,19 @@ export default function Home() {
 
   if (!sessionUserId) {
     return (
-      <main className="grid min-h-screen place-items-center bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_42%,#f3f4f2_100%)] px-4">
-        <section className="w-full max-w-md rounded-3xl border border-[#e4e0d6] bg-white/85 p-6 shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
-          <div className="flex items-center justify-between gap-4">
-            <div>
-              <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
-                IMAS
-              </p>
-              <h1 className="mt-2 text-2xl font-semibold text-[#1a1a18]">
-                Вход в чек-лист
-              </h1>
-            </div>
-            <div className="grid size-12 place-items-center rounded-2xl bg-[#edf6ef] text-sm font-bold text-[#2e7d5b]">
-              {total}
-            </div>
-          </div>
-          <p className="mt-4 text-sm leading-6 text-[#6b6a64]">
-            Войдите через Google, чтобы открыть документы и сохранять прогресс в
-            аккаунте.
-          </p>
+      <main className="grid min-h-screen place-items-center bg-[#f7f5ed] px-4">
+        <section className="w-full max-w-[420px] rounded-[30px] border border-[#ded9cc] bg-white/95 p-7 text-center shadow-[0_28px_90px_rgba(35,31,22,0.14)]">
+          <p className="text-sm font-bold text-[#2e7d5b]">Malaysia-help</p>
+          <h1 className="mt-5 text-3xl font-semibold leading-tight text-[#1a1a18]">
+            Вход в чек-лист
+          </h1>
           <button
             type="button"
             onClick={signInWithGoogle}
-            className="mt-6 w-full rounded-2xl bg-[#1a1a18] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2f2f2b]"
+            className="mt-8 flex h-14 w-full items-center justify-center gap-3 rounded-2xl border border-[#ded9cc] bg-white px-4 text-sm font-semibold text-[#1a1a18] shadow-sm transition-colors hover:bg-[#f8f7f2]"
           >
-            Войти через Google
+            <Image src="/google.svg" alt="" width={20} height={20} />
+            <span>Войти через Google</span>
           </button>
         </section>
       </main>
@@ -595,7 +581,7 @@ export default function Home() {
         <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <div className="min-w-0">
             <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
-              IMAS
+              Malaysia-help
             </p>
             <p className="truncate text-sm font-semibold text-[#1a1a18] sm:text-base">
               Документы на визу
