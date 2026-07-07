@@ -244,14 +244,6 @@ function readLocalChecked(): CheckedState {
   }
 }
 
-function writeLocalChecked(checked: CheckedState) {
-  try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
-  } catch {
-    // localStorage can be unavailable in private browsing modes.
-  }
-}
-
 function getUserLabel(session: Session | null) {
   return (
     session?.user.user_metadata.full_name ??
@@ -375,14 +367,6 @@ export default function Home() {
       subscription.unsubscribe();
     };
   }, [supabase]);
-
-  useEffect(() => {
-    if (!storageReady || !authReady || sessionUserId) {
-      return;
-    }
-
-    writeLocalChecked(checked);
-  }, [authReady, checked, sessionUserId, storageReady]);
 
   useEffect(() => {
     if (!storageReady || !authReady || !sessionUserId || !supabase) {
@@ -518,7 +502,7 @@ export default function Home() {
     remoteReady.current = false;
     setSession(null);
     setSyncStatus("local");
-    setChecked(readLocalChecked());
+    setChecked({});
   }
 
   const userLabel = getUserLabel(session);
@@ -529,6 +513,76 @@ export default function Home() {
     saved: "Сохранено",
     error: "Ошибка синхронизации",
   };
+
+  if (!authReady) {
+    return (
+      <main className="grid min-h-screen place-items-center bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_42%,#f3f4f2_100%)] px-4">
+        <section className="w-full max-w-sm rounded-3xl border border-[#e4e0d6] bg-white/85 p-6 text-center shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
+          <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
+            IMAS
+          </p>
+          <h1 className="mt-3 text-2xl font-semibold text-[#1a1a18]">
+            Загружаем сессию
+          </h1>
+          <p className="mt-3 text-sm leading-6 text-[#6b6a64]">
+            Проверяем авторизацию перед открытием чек-листа.
+          </p>
+        </section>
+      </main>
+    );
+  }
+
+  if (!supabase) {
+    return (
+      <main className="grid min-h-screen place-items-center bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_42%,#f3f4f2_100%)] px-4">
+        <section className="w-full max-w-md rounded-3xl border border-[#e4e0d6] bg-white/85 p-6 shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
+          <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
+            IMAS
+          </p>
+          <h1 className="mt-3 text-2xl font-semibold text-[#1a1a18]">
+            Авторизация не настроена
+          </h1>
+          <p className="mt-3 text-sm leading-6 text-[#6b6a64]">
+            Добавь Supabase environment variables в Vercel и сделай redeploy,
+            чтобы включить вход через Google.
+          </p>
+        </section>
+      </main>
+    );
+  }
+
+  if (!sessionUserId) {
+    return (
+      <main className="grid min-h-screen place-items-center bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_42%,#f3f4f2_100%)] px-4">
+        <section className="w-full max-w-md rounded-3xl border border-[#e4e0d6] bg-white/85 p-6 shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
+                IMAS
+              </p>
+              <h1 className="mt-2 text-2xl font-semibold text-[#1a1a18]">
+                Вход в чек-лист
+              </h1>
+            </div>
+            <div className="grid size-12 place-items-center rounded-2xl bg-[#edf6ef] text-sm font-bold text-[#2e7d5b]">
+              {total}
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-[#6b6a64]">
+            Войдите через Google, чтобы открыть документы и сохранять прогресс в
+            аккаунте.
+          </p>
+          <button
+            type="button"
+            onClick={signInWithGoogle}
+            className="mt-6 w-full rounded-2xl bg-[#1a1a18] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2f2f2b]"
+          >
+            Войти через Google
+          </button>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_34%,#f3f4f2_100%)]">
