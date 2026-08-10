@@ -29,7 +29,7 @@ const groups: ChecklistGroup[] = [
     title: "Перед вылетом",
     items: [
       {
-        text: "MDAC (Malaysia Digital Arrival Card) — обязательная электронная регистрация на каждого человека отдельно (маму и сына), включая детей. Подаётся строго за 3 дня (72 часа) до прилёта на imigresen-online.imi.gov.my/mdac/main, бесплатно. Без неё могут не пустить на посадку.",
+        text: "Заполнить MDAC отдельно на маму и сына в течение 3 дней до прибытия в Малайзию (включая день подачи) и сохранить оба подтверждения.",
         loc: "flight",
       },
     ],
@@ -816,6 +816,84 @@ export default function Home() {
             Сбросить отметки
           </button>
         </section>
+
+        {(filter === "all" || filter === "flight") && (
+          <section className="mt-5 overflow-hidden rounded-3xl border border-[#ecd8c2] bg-[#fffaf4] shadow-[0_18px_45px_rgba(106,67,28,0.07)]">
+            <div className="border-b border-[#f0dfcd] bg-[#fff4e8] px-5 py-5 sm:px-6">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#a85b17]">
+                    Перед прилётом
+                  </p>
+                  <h2 className="mt-2 text-xl font-semibold text-[#1a1a18] sm:text-2xl">
+                    Как заполнить MDAC
+                  </h2>
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-[#6b6a64]">
+                    Malaysia Digital Arrival Card заполняется бесплатно и
+                    отдельно на каждого путешественника — в том числе на
+                    ребёнка.
+                  </p>
+                </div>
+                <a
+                  href="https://imigresen-online.imi.gov.my/mdac/main"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-2xl bg-[#a85b17] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#8f4c12]"
+                >
+                  Открыть официальный сайт ↗
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
+              <div className="border-b border-[#f0e5d8] p-5 sm:p-6 lg:border-b-0 lg:border-r">
+                <h3 className="text-sm font-semibold text-[#1a1a18]">
+                  Что подготовить
+                </h3>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f4d47]">
+                  <li>• Паспорта мамы и сына и отдельный email для получения подтверждения.</li>
+                  <li>• Даты прилёта и вылета, номер рейса и страну, откуда прилетаете.</li>
+                  <li>• Название и полный адрес жилья в Малайзии, штат, город и индекс.</li>
+                </ul>
+                <div className="mt-5 rounded-2xl border border-[#efd7bb] bg-white/75 p-4 text-sm leading-6 text-[#7a4a1b]">
+                  Подавать можно только тогда, когда дата прилёта попадает в
+                  ближайшие 3 дня, включая день заполнения. Например, при
+                  прилёте 10-го числа форму можно отправить 8, 9 или 10-го.
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6">
+                <h3 className="text-sm font-semibold text-[#1a1a18]">
+                  Порядок подачи
+                </h3>
+                <ol className="mt-4 space-y-4 text-sm leading-6 text-[#4f4d47]">
+                  <li className="flex gap-3">
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#fde8d3] text-xs font-bold text-[#a85b17]">1</span>
+                    <span>На официальном сайте выбрать <b>Register</b> и внести данные точно как в паспорте.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#fde8d3] text-xs font-bold text-[#a85b17]">2</span>
+                    <span>Заполнить сведения о поездке и адрес проживания, проверить номер паспорта, email и даты.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#fde8d3] text-xs font-bold text-[#a85b17]">3</span>
+                    <span>Отправить форму, затем повторить весь процесс отдельно для сына.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#fde8d3] text-xs font-bold text-[#a85b17]">4</span>
+                    <span>Сохранить письма-подтверждения или скриншоты в телефоне и офлайн; держать их вместе с паспортами при прохождении контроля.</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div className="border-t border-[#f0dfcd] bg-white/60 px-5 py-4 text-xs leading-5 text-[#7d756b] sm:px-6">
+              Пользуйтесь только доменом <b>imi.gov.my</b>. Официальная форма
+              не просит оплату. MDAC — не виза и не заменяет разрешение на
+              въезд.
+            </div>
+          </section>
+        )}
 
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
           {groups.map((group) => {
