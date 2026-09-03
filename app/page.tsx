@@ -571,23 +571,23 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,#eef7ef_0,#f6f3ea_34%,#f3f4f2_100%)]">
+    <div className="min-h-screen bg-[#f4f6f1] text-[#171717]">
       <nav
         className={[
-          "fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/85 backdrop-blur-xl transition-transform duration-300",
+          "fixed inset-x-0 top-0 z-50 border-b border-[#d8ddd5] bg-white/95 transition-transform duration-300",
           navVisible ? "translate-y-0" : "-translate-y-full",
         ].join(" ")}
       >
-        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-16 w-full max-w-[1312px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-0">
           <div className="min-w-0">
-            <p className="text-[11px] font-bold uppercase text-[#2e7d5b]">
+            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[#1f7a52]">
               Malaysia-help
             </p>
             <p className="truncate text-sm font-semibold text-[#1a1a18] sm:text-base">
               Документы на визу
             </p>
           </div>
-          <div className="hidden items-center gap-2 rounded-full border border-[#e3e1d8] bg-[#f8f7f2] p-1 md:flex">
+          <div className="hidden items-center gap-1.5 md:flex">
             {filters.map((item) => {
               const active = filter === item.key;
 
@@ -597,10 +597,10 @@ export default function Home() {
                   type="button"
                   onClick={() => setFilter(item.key)}
                   className={[
-                    "rounded-full px-3 py-2 text-xs font-semibold transition-colors",
+                    "border border-[#d8ddd5] px-3.5 py-2 text-xs font-semibold transition-colors",
                     active
                       ? "bg-[#1a1a18] text-white"
-                      : "text-[#6b6a64] hover:bg-white hover:text-[#1a1a18]",
+                      : "bg-[#fafbf8] text-[#626a66] hover:bg-white hover:text-[#171717]",
                   ].join(" ")}
                 >
                   {item.label}
@@ -632,7 +632,7 @@ export default function Home() {
                 Войти Google
               </button>
             )}
-            <div className="flex items-center gap-2 rounded-full bg-[#1a1a18] px-3 py-2 text-xs font-semibold text-white shadow-sm">
+            <div className="flex items-center gap-2 bg-[#17201b] px-3 py-2 font-mono text-xs font-semibold text-white">
               <span>{checkedCount}</span>
               <span className="text-white/45">/</span>
               <span>{total}</span>
@@ -641,39 +641,34 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="mx-auto w-full max-w-6xl px-4 pb-8 pt-20 sm:px-6 sm:pb-12 lg:px-8">
-        <section className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-stretch">
-          <div className="rounded-[28px] border border-white/70 bg-[#1d2a22] p-5 text-white shadow-[0_24px_70px_rgba(29,42,34,0.16)] sm:p-7 lg:p-8">
+      <main className="mx-auto w-full max-w-[1312px] px-4 pb-8 pt-20 sm:px-6 sm:pb-12 lg:px-0">
+        <section className="mt-8 grid overflow-hidden bg-[#17201b] text-white lg:grid-cols-[1.1fr_.9fr]">
+          <div className="flex min-h-[380px] flex-col justify-center p-6 sm:p-10 lg:p-12">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-white/12 px-3 py-1 text-xs font-semibold text-white/85">
-                Мама + сын
-              </span>
-              <span className="rounded-full bg-[#d8efe0] px-3 py-1 text-xs font-semibold text-[#1f6b3f]">
-                Спонсор — мама
-              </span>
+              <span className="font-mono text-[11px] font-bold tracking-[0.08em] text-[#a7ddba]">IMAS VISA CHECKLIST</span>
             </div>
-            <h1 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-              IMAS — документы на визу
+            <h1 className="mt-5 max-w-2xl text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-[58px]">
+              Визовый штаб для мамы и сына
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-white/72 sm:text-base">
-              Собранный чек-лист по визе студента и опекуна: что готовить до
-              вылета, что делать уже в Малайзии и что закрыть перед рейсом.
+              Один рабочий экран: что собрать в Казахстане, что закрыть в
+              Малайзии и что не забыть перед рейсом.
             </p>
 
             <div className="mt-8 grid grid-cols-3 gap-2 sm:max-w-xl sm:gap-3">
-              <div className="rounded-2xl bg-white/10 p-3">
+              <div className="border border-white/10 bg-white/[0.06] p-3">
                 <p className="text-2xl font-semibold">{checkedCount}</p>
                 <p className="mt-1 text-[11px] font-medium text-white/58">
                   готово
                 </p>
               </div>
-              <div className="rounded-2xl bg-white/10 p-3">
+              <div className="border border-white/10 bg-white/[0.06] p-3">
                 <p className="text-2xl font-semibold">{remainingCount}</p>
                 <p className="mt-1 text-[11px] font-medium text-white/58">
                   осталось
                 </p>
               </div>
-              <div className="rounded-2xl bg-white/10 p-3">
+              <div className="border border-white/10 bg-white/[0.06] p-3">
                 <p className="text-2xl font-semibold">
                   {Math.round(progress)}%
                 </p>
@@ -683,8 +678,25 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div
+            className="relative min-h-[260px] bg-cover bg-center lg:min-h-[420px]"
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg, rgba(23,32,27,.45), rgba(23,32,27,.08)), url('https://images.unsplash.com/photo-1755617597585-e247bd3266c5?auto=format&fit=crop&w=1400&q=85')",
+            }}
+          >
+            <div className="absolute bottom-8 right-8 w-52 bg-white p-5 text-[#171717] shadow-xl">
+              <p className="font-mono text-[10px] font-bold text-[#626a66]">ОБЩИЙ ПРОГРЕСС</p>
+              <p className="mt-2 font-mono text-4xl font-bold">{Math.round(progress)}%</p>
+              <div className="mt-3 h-2 bg-[#e5e9e2]">
+                <div className="h-full bg-[#1f7a52] transition-[width]" style={{ width: `${progress}%` }} />
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <aside className="rounded-[28px] border border-[#e4e0d6] bg-white/85 p-5 shadow-[0_18px_50px_rgba(42,38,26,0.08)] backdrop-blur">
+        <div className="mt-9 grid items-start gap-8 lg:grid-cols-[328px_minmax(0,1fr)]">
+          <aside className="border border-[#d8ddd5] bg-white p-5 lg:sticky lg:top-24">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs font-bold uppercase text-[#8b877b]">
@@ -694,20 +706,20 @@ export default function Home() {
                   {checkedCount} из {total}
                 </p>
               </div>
-              <div className="grid size-16 place-items-center rounded-full bg-[#edf6ef] text-sm font-bold text-[#2e7d5b]">
+              <div className="grid size-16 place-items-center bg-[#e7f3ea] font-mono text-sm font-bold text-[#1f7a52]">
                 {Math.round(progress)}%
               </div>
             </div>
 
-            <div className="mt-5 h-3 overflow-hidden rounded-full bg-[#ebe8dd]">
+            <div className="mt-5 h-2 overflow-hidden bg-[#e5e9e2]">
               <div
-                className="h-full rounded-full bg-[#2e7d5b] transition-[width] duration-300"
+                className="h-full bg-[#1f7a52] transition-[width] duration-300"
                 style={{ width: `${progress}%` }}
               />
             </div>
 
             <div className="mt-5 grid grid-cols-3 gap-2 text-center">
-              <div className="rounded-2xl bg-[#f2f8f4] p-3">
+              <div className="border border-[#d8ddd5] bg-[#f2f8f4] p-3">
                 <p className="text-lg font-semibold text-[#1f6b3f]">
                   {groups.flatMap((group) => group.items).filter((item) => item.loc === "my").length}
                 </p>
@@ -715,7 +727,7 @@ export default function Home() {
                   MY
                 </p>
               </div>
-              <div className="rounded-2xl bg-[#f1effb] p-3">
+              <div className="border border-[#d8ddd5] bg-[#f1effb] p-3">
                 <p className="text-lg font-semibold text-[#4a3fa8]">
                   {groups.flatMap((group) => group.items).filter((item) => item.loc === "kz").length}
                 </p>
@@ -723,7 +735,7 @@ export default function Home() {
                   KZ
                 </p>
               </div>
-              <div className="rounded-2xl bg-[#fff0e2] p-3">
+              <div className="border border-[#d8ddd5] bg-[#fff0e2] p-3">
                 <p className="text-lg font-semibold text-[#a85b17]">
                   {groups.flatMap((group) => group.items).filter((item) => item.loc === "flight").length}
                 </p>
@@ -733,7 +745,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-[#eeece4] bg-[#fbfaf6] p-3">
+            <div className="mt-5 border border-[#d8ddd5] bg-[#fafbf8] p-3">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <p className="text-xs font-bold uppercase text-[#8b877b]">
@@ -773,9 +785,10 @@ export default function Home() {
               ) : null}
             </div>
           </aside>
-        </section>
 
-        <section className="sticky top-[72px] z-30 mt-4 rounded-2xl border border-[#e4e0d6] bg-white/90 p-2 shadow-sm backdrop-blur md:hidden">
+          <div className="min-w-0">
+
+        <section className="sticky top-[72px] z-30 border border-[#d8ddd5] bg-white/95 p-2 md:hidden">
           <div className="flex gap-2 overflow-x-auto">
             {filters.map((item) => {
               const active = filter === item.key;
@@ -786,7 +799,7 @@ export default function Home() {
                   type="button"
                   onClick={() => setFilter(item.key)}
                   className={[
-                    "shrink-0 rounded-xl px-3.5 py-2.5 text-[13px] font-semibold transition-colors",
+                    "shrink-0 border border-[#d8ddd5] px-3.5 py-2.5 text-[13px] font-semibold transition-colors",
                     active
                       ? "bg-[#1a1a18] text-white"
                       : "bg-[#f6f4ed] text-[#6b6a64]",
@@ -799,7 +812,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-5 flex flex-col gap-3 rounded-3xl border border-[#e4e0d6] bg-white/70 p-3 shadow-[0_18px_50px_rgba(42,38,26,0.06)] backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:p-4">
+        <section className="mt-4 flex flex-col gap-3 border border-[#d8ddd5] bg-white p-3 sm:flex-row sm:items-center sm:justify-between sm:p-4">
           <div>
             <p className="text-xs font-bold uppercase text-[#8b877b]">
               Сейчас показано
@@ -811,14 +824,14 @@ export default function Home() {
           <button
             type="button"
             onClick={resetItems}
-            className="rounded-2xl border border-[#ead5d5] bg-white px-4 py-3 text-sm font-semibold text-[#a33b3b] transition-colors hover:bg-[#fff6f6]"
+            className="border border-[#e6b8b8] bg-[#fff8f8] px-4 py-3 text-sm font-semibold text-[#b13b3b] transition-colors hover:bg-white"
           >
             Сбросить отметки
           </button>
         </section>
 
         {(filter === "all" || filter === "flight") && (
-          <section className="mt-5 overflow-hidden rounded-3xl border border-[#ecd8c2] bg-[#fffaf4] shadow-[0_18px_45px_rgba(106,67,28,0.07)]">
+          <section className="mt-5 overflow-hidden border border-[#e8cbaa] bg-[#fff7ee]">
             <div className="border-b border-[#f0dfcd] bg-[#fff4e8] px-5 py-5 sm:px-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
@@ -895,7 +908,7 @@ export default function Home() {
           </section>
         )}
 
-        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        <div className="mt-5 grid gap-4 xl:grid-cols-2">
           {groups.map((group) => {
             const visibleItems = group.items
               .map((item, index) => ({ ...item, id: `${group.key}_${index}` }))
@@ -908,14 +921,14 @@ export default function Home() {
             return (
               <section
                 key={group.key}
-                className="overflow-hidden rounded-3xl border border-[#e4e0d6] bg-white shadow-[0_18px_45px_rgba(42,38,26,0.05)]"
+                className="overflow-hidden border border-[#d8ddd5] bg-white"
               >
                 <div className="border-b border-[#eeece4] bg-[#fbfaf6] px-4 py-3.5 sm:px-5">
                   <div className="flex items-center justify-between gap-3">
                     <h2 className="text-[15px] font-semibold leading-snug text-[#1a1a18] sm:text-base">
                       {group.title}
                     </h2>
-                    <span className="shrink-0 rounded-full bg-[#eeece4] px-2.5 py-1 text-xs font-semibold text-[#6b6a64]">
+                    <span className="shrink-0 bg-[#eef1ec] px-2.5 py-1 font-mono text-xs font-semibold text-[#626a66]">
                       {visibleItems.length}
                     </span>
                   </div>
@@ -947,7 +960,7 @@ export default function Home() {
                         <span className="flex min-w-0 flex-1 flex-col gap-2">
                           <span
                             className={[
-                              "w-fit rounded-full px-2.5 py-1 text-[11px] font-bold",
+                              "w-fit px-2.5 py-1 text-[11px] font-bold",
                               badgeClasses[item.loc],
                             ].join(" ")}
                           >
@@ -978,6 +991,8 @@ export default function Home() {
             ? "Данные сохраняются в аккаунте и будут доступны после входа на другом устройстве."
             : "Без входа данные хранятся локально в этом браузере. После входа через Google отметки перенесутся в аккаунт."}
         </p>
+          </div>
+        </div>
       </main>
     </div>
   );

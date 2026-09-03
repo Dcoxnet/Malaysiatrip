@@ -1,0 +1,3641 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "rwlsG",
+      "x": 0,
+      "y": 0,
+      "name": "Malaysia Help Components",
+      "width": 1180,
+      "height": 360,
+      "fill": "#F9FAF7",
+      "stroke": "$mh-line",
+      "strokeWidth": 1,
+      "gap": 20,
+      "padding": 24,
+      "children": [
+        {
+          "type": "frame",
+          "id": "Q7pp4",
+          "name": "Component / Metric Tile",
+          "reusable": true,
+          "width": 170,
+          "height": 108,
+          "fill": "$mh-panel",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "e272Us",
+              "name": "Metric Label",
+              "fill": "$mh-muted",
+              "content": "Готово",
+              "fontFamily": "$mh-font-body",
+              "fontSize": 12,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "kSseH",
+              "name": "Metric Value",
+              "fill": "$mh-ink",
+              "content": "18",
+              "fontFamily": "$mh-font-data",
+              "fontSize": 32,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "JZgxV",
+              "name": "Metric Note",
+              "fill": "$mh-muted",
+              "content": "из 39",
+              "fontFamily": "$mh-font-body",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Juufd",
+          "name": "Component / Filter Chip",
+          "reusable": true,
+          "width": 142,
+          "height": 42,
+          "fill": "$mh-panel",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "gap": 8,
+          "padding": [
+            11,
+            14
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "WBSou",
+              "name": "Filter Dot",
+              "fill": "$mh-green",
+              "width": 8,
+              "height": 8
+            },
+            {
+              "type": "text",
+              "id": "Ayz2l",
+              "name": "Filter Label",
+              "fill": "$mh-ink",
+              "content": "Малайзия",
+              "fontFamily": "$mh-font-body",
+              "fontSize": 13,
+              "fontWeight": "650"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "c4yu5Q",
+          "name": "Component / Location Badge",
+          "reusable": true,
+          "width": 104,
+          "height": 30,
+          "fill": "$mh-soft-green",
+          "gap": 7,
+          "padding": [
+            7,
+            10
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "SJJ6O",
+              "name": "Badge Dot",
+              "fill": "$mh-green",
+              "width": 7,
+              "height": 7
+            },
+            {
+              "type": "text",
+              "id": "v4fL1",
+              "name": "Badge Label",
+              "fill": "$mh-green",
+              "content": "Малайзия",
+              "fontFamily": "$mh-font-body",
+              "fontSize": 11,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hygk6",
+          "name": "Component / Checklist Row",
+          "reusable": true,
+          "width": 430,
+          "fill": "$mh-panel",
+          "stroke": "$mh-line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "VlXP2",
+              "name": "Row Checkbox",
+              "width": 22,
+              "height": 22,
+              "fill": "#FFFFFF",
+              "stroke": "$mh-green",
+              "strokeWidth": 2,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "qfgXF",
+                  "name": "Row Check Icon",
+                  "width": 13,
+                  "height": 13,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$mh-green"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QV0rn",
+              "name": "Row Body",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 9,
+              "children": [
+                {
+                  "id": "V6OYz",
+                  "type": "ref",
+                  "ref": "c4yu5Q",
+                  "name": "Row Location Badge"
+                },
+                {
+                  "type": "text",
+                  "id": "bHnwU",
+                  "name": "Row Text",
+                  "fill": "$mh-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Копия паспорта студента, все страницы, оригинал при себе.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "bO30J",
+      "x": 0,
+      "y": 460,
+      "name": "Desktop / Malaysia Help Redesign",
+      "clip": true,
+      "width": 1440,
+      "height": 2520,
+      "fill": "$mh-bg",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "wUPQt",
+          "x": 0,
+          "y": 0,
+          "name": "Background Top Wash",
+          "fill": "#E9EFE8",
+          "width": 1440,
+          "height": 470
+        },
+        {
+          "type": "frame",
+          "id": "Zg1EC",
+          "x": 64,
+          "y": 34,
+          "name": "Desktop Nav",
+          "width": 1312,
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "u9CQV",
+              "name": "Brand Block",
+              "width": 260,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                0,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PEhSQ",
+                  "name": "Brand Eyebrow",
+                  "fill": "$mh-green",
+                  "content": "MALAYSIA-HELP",
+                  "fontFamily": "$mh-font-data",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Cq80q",
+                  "name": "Brand Title",
+                  "fill": "$mh-ink",
+                  "content": "Документы на визу",
+                  "fontFamily": "$mh-font-head",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Eq5Pp",
+              "name": "Desktop Nav Filters",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gYWMK",
+                  "name": "Nav Filter / Все",
+                  "height": 36,
+                  "fill": "#171717",
+                  "stroke": "#171717",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    15
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MCmL8",
+                      "name": "Nav Filter Label / Все",
+                      "fill": "#FFFFFF",
+                      "content": "Все",
+                      "fontFamily": "$mh-font-body",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PUbdc",
+                  "name": "Nav Filter / Малайзия",
+                  "height": 36,
+                  "fill": "#E7F3EA",
+                  "stroke": "#D8DDD5",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    15
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Y1mfGm",
+                      "name": "Nav Filter Label / Малайзия",
+                      "fill": "#1F7A52",
+                      "content": "Малайзия",
+                      "fontFamily": "$mh-font-body",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K4bUSB",
+                  "name": "Nav Filter / До вылета",
+                  "height": 36,
+                  "fill": "#EAF0FF",
+                  "stroke": "#D8DDD5",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    15
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lPfPt",
+                      "name": "Nav Filter Label / До вылета",
+                      "fill": "#2458D3",
+                      "content": "До вылета",
+                      "fontFamily": "$mh-font-body",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "A49Cmn",
+                  "name": "Nav Filter / Перед рейсом",
+                  "height": 36,
+                  "fill": "#FFF0DF",
+                  "stroke": "#D8DDD5",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    15
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R62IS",
+                      "name": "Nav Filter Label / Перед рейсом",
+                      "fill": "#B86416",
+                      "content": "Перед рейсом",
+                      "fontFamily": "$mh-font-body",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Z8uE0s",
+              "name": "Account Status",
+              "gap": 10,
+              "padding": [
+                0,
+                20
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "OoKo8",
+                  "name": "Cloud Sync Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "cloud-check",
+                  "library": "lucide",
+                  "fill": "$mh-green"
+                },
+                {
+                  "type": "text",
+                  "id": "vFmir",
+                  "name": "Account Label",
+                  "fill": "$mh-ink",
+                  "content": "Сохранено",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "U3ZTe",
+          "x": 64,
+          "y": 128,
+          "name": "Hero Planner",
+          "width": 1312,
+          "height": 420,
+          "fill": "$mh-dark",
+          "children": [
+            {
+              "type": "frame",
+              "id": "aSRR0",
+              "name": "Hero Copy",
+              "width": 720,
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": [
+                48,
+                44
+              ],
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WyqKH",
+                  "name": "Hero Kicker",
+                  "fill": "#A7DDBA",
+                  "content": "IMAS VISA CHECKLIST",
+                  "fontFamily": "$mh-font-data",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "iMkJe",
+                  "name": "Hero Headline",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Визовый штаб для мамы и сына",
+                  "lineHeight": 1.02,
+                  "fontFamily": "$mh-font-head",
+                  "fontSize": 58,
+                  "fontWeight": "750"
+                },
+                {
+                  "type": "text",
+                  "id": "rVllA",
+                  "name": "Hero Description",
+                  "fill": "#CAD2CD",
+                  "textGrowth": "fixed-width",
+                  "width": 610,
+                  "content": "Один рабочий экран: что собрать в Казахстане, что закрыть в Малайзии и что не забыть перед рейсом. Без длинной простыни и без потери статуса.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "OSbab",
+                  "name": "Hero Actions",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "d5DNmj",
+                      "name": "Primary Action",
+                      "height": 46,
+                      "fill": "#FFFFFF",
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "IAu1A",
+                          "name": "Primary Action Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "list-checks",
+                          "library": "lucide",
+                          "fill": "$mh-ink"
+                        },
+                        {
+                          "type": "text",
+                          "id": "m5eTY4",
+                          "name": "Primary Action Label",
+                          "fill": "$mh-ink",
+                          "content": "Продолжить список",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 14,
+                          "fontWeight": "750"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dkeuK",
+                      "name": "Secondary Action",
+                      "height": 46,
+                      "stroke": "#6D776F",
+                      "strokeWidth": 1,
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "MUjjV",
+                          "name": "Secondary Action Icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "external-link",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ogm9q",
+                          "name": "Secondary Action Label",
+                          "fill": "#FFFFFF",
+                          "content": "MDAC сайт",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Brat2",
+              "name": "Hero Travel Still",
+              "metadata": {
+                "type": "unsplash",
+                "username": "edw_lawr",
+                "link": "https://unsplash.com/@edw_lawr",
+                "author": "Edward Lawrence"
+              },
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1755617597585-e247bd3266c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg0MjcyNjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "jyFc6",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Hero Image Scrim",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 90,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#17201BDD",
+                        "position": 0
+                      },
+                      {
+                        "color": "#17201B22",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "width": 592,
+                  "height": 420
+                },
+                {
+                  "type": "frame",
+                  "id": "IikQl",
+                  "x": 290,
+                  "y": 238,
+                  "name": "Hero Progress Card",
+                  "width": 244,
+                  "height": 132,
+                  "fill": "#FFFFFF",
+                  "stroke": "#D8DDD5",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 18,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VT9zE",
+                      "name": "Hero Progress Label",
+                      "fill": "$mh-muted",
+                      "content": "ОБЩИЙ ПРОГРЕСС",
+                      "fontFamily": "$mh-font-data",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uRL5X",
+                      "name": "Hero Progress Value",
+                      "fill": "$mh-ink",
+                      "content": "46%",
+                      "fontFamily": "$mh-font-data",
+                      "fontSize": 42,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Didfo",
+                      "name": "Hero Progress Bar",
+                      "width": "fill_container",
+                      "height": 8,
+                      "fill": "#E5E9E2",
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "D62Qw",
+                          "x": 0,
+                          "y": 0,
+                          "name": "Hero Progress Fill",
+                          "fill": "$mh-green",
+                          "width": 96,
+                          "height": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "C9m7l",
+          "x": 64,
+          "y": 584,
+          "name": "Status Sidebar",
+          "width": 328,
+          "height": 640,
+          "fill": "#FFFFFF",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 18,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "qp6PM",
+              "name": "Sidebar Title",
+              "fill": "$mh-ink",
+              "content": "Состояние дела",
+              "fontFamily": "$mh-font-head",
+              "fontSize": 22,
+              "fontWeight": "750"
+            },
+            {
+              "type": "frame",
+              "id": "xPFd2",
+              "name": "Sidebar Metrics",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "id": "duPg4",
+                  "type": "ref",
+                  "ref": "Q7pp4",
+                  "name": "Metric / Готово",
+                  "width": "fill_container",
+                  "descendants": {
+                    "e272Us": {
+                      "content": "Готово"
+                    },
+                    "kSseH": {
+                      "content": "18"
+                    },
+                    "JZgxV": {
+                      "content": "из 39"
+                    }
+                  }
+                },
+                {
+                  "id": "P7fK1X",
+                  "type": "ref",
+                  "ref": "Q7pp4",
+                  "name": "Metric / Осталось",
+                  "width": "fill_container",
+                  "descendants": {
+                    "e272Us": {
+                      "content": "Осталось"
+                    },
+                    "kSseH": {
+                      "content": "21"
+                    },
+                    "JZgxV": {
+                      "content": "пункта"
+                    }
+                  }
+                },
+                {
+                  "id": "YxOKd",
+                  "type": "ref",
+                  "ref": "Q7pp4",
+                  "name": "Metric / Фильтр",
+                  "width": "fill_container",
+                  "descendants": {
+                    "e272Us": {
+                      "content": "Фильтр"
+                    },
+                    "kSseH": {
+                      "content": "Все"
+                    },
+                    "JZgxV": {
+                      "content": "39 пунктов"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NOYZa",
+              "name": "Location Legend",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AAvlJ",
+                  "name": "Legend Row / Малайзия",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "kpEwE",
+                      "name": "Legend Dot / Малайзия",
+                      "fill": "#1F7A52",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "frame",
+                      "id": "F3ZLmJ",
+                      "name": "Legend Text / Малайзия",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OiZcw",
+                          "name": "Legend Name / Малайзия",
+                          "fill": "$mh-ink",
+                          "content": "Малайзия",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "750"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cDayE",
+                          "name": "Legend Count / Малайзия",
+                          "fill": "$mh-muted",
+                          "content": "16 документов",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y91Elo",
+                  "name": "Legend Row / До вылета",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "bMBj6",
+                      "name": "Legend Dot / До вылета",
+                      "fill": "#2458D3",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LOtcz",
+                      "name": "Legend Text / До вылета",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QnOWG",
+                          "name": "Legend Name / До вылета",
+                          "fill": "$mh-ink",
+                          "content": "До вылета",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "750"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cz3CM",
+                          "name": "Legend Count / До вылета",
+                          "fill": "$mh-muted",
+                          "content": "22 документа",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rIla7",
+                  "name": "Legend Row / Перед рейсом",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "e2SlsS",
+                      "name": "Legend Dot / Перед рейсом",
+                      "fill": "#B86416",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "frame",
+                      "id": "t2Xmj",
+                      "name": "Legend Text / Перед рейсом",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HG6bW",
+                          "name": "Legend Name / Перед рейсом",
+                          "fill": "$mh-ink",
+                          "content": "Перед рейсом",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "750"
+                        },
+                        {
+                          "type": "text",
+                          "id": "l8ykAI",
+                          "name": "Legend Count / Перед рейсом",
+                          "fill": "$mh-muted",
+                          "content": "1 форма",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ERE06",
+              "name": "Reset Button",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#FFF8F8",
+              "stroke": "#E6B8B8",
+              "strokeWidth": 1,
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "zx12h",
+                  "name": "Reset Icon",
+                  "width": 17,
+                  "height": 17,
+                  "icon": "rotate-ccw",
+                  "library": "lucide",
+                  "fill": "$mh-red"
+                },
+                {
+                  "type": "text",
+                  "id": "LC1Dp",
+                  "name": "Reset Label",
+                  "fill": "$mh-red",
+                  "content": "Сбросить отметки",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 14,
+                  "fontWeight": "750"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "K4CAgd",
+          "x": 424,
+          "y": 584,
+          "name": "Desktop Main Content",
+          "width": 952,
+          "height": 1860,
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "pSpOh",
+              "name": "MDAC Official Guide",
+              "width": "fill_container",
+              "height": 300,
+              "fill": "#FFF7EE",
+              "stroke": "#E8CBAA",
+              "strokeWidth": 1,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "A6M8K",
+                  "name": "MDAC Copy",
+                  "width": 480,
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 28,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qv6jc",
+                      "name": "MDAC Kicker",
+                      "fill": "$mh-amber",
+                      "content": "ПЕРЕД ПРИЛЕТОМ",
+                      "fontFamily": "$mh-font-data",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q5f67",
+                      "name": "MDAC Title",
+                      "fill": "$mh-ink",
+                      "content": "MDAC за 3 дня",
+                      "fontFamily": "$mh-font-head",
+                      "fontSize": 30,
+                      "fontWeight": "760"
+                    },
+                    {
+                      "type": "text",
+                      "id": "z6o6hp",
+                      "name": "MDAC Body",
+                      "fill": "#66584A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Заполнить отдельно на маму и сына. Нужны паспорт, рейс, даты, email и адрес проживания в Малайзии.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$mh-font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Y12QZ",
+                      "name": "MDAC Button",
+                      "height": 42,
+                      "fill": "$mh-amber",
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "f8b0Y",
+                          "name": "MDAC Button Label",
+                          "fill": "#FFFFFF",
+                          "content": "Официальный imi.gov.my",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "750"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "eikLB",
+                          "name": "MDAC Button Icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "arrow-up-right",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "U0nR8",
+                  "name": "MDAC Steps",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    24,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Z9Jtw0",
+                      "name": "MDAC Step / 01",
+                      "width": "fill_container",
+                      "height": 54,
+                      "stroke": "#EAD8C5",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ohVEs",
+                          "name": "MDAC Step Number / 01",
+                          "fill": "$mh-amber",
+                          "content": "01",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cE1GS",
+                          "name": "MDAC Step Text / 01",
+                          "fill": "$mh-ink",
+                          "content": "Register на каждого",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 15,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "W66tAx",
+                      "name": "MDAC Step / 02",
+                      "width": "fill_container",
+                      "height": 54,
+                      "stroke": "#EAD8C5",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "X9EBOk",
+                          "name": "MDAC Step Number / 02",
+                          "fill": "$mh-amber",
+                          "content": "02",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TeGWK",
+                          "name": "MDAC Step Text / 02",
+                          "fill": "$mh-ink",
+                          "content": "Проверить паспорт и даты",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 15,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kajx2",
+                      "name": "MDAC Step / 03",
+                      "width": "fill_container",
+                      "height": 54,
+                      "stroke": "#EAD8C5",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KALFT",
+                          "name": "MDAC Step Number / 03",
+                          "fill": "$mh-amber",
+                          "content": "03",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UVYF9",
+                          "name": "MDAC Step Text / 03",
+                          "fill": "$mh-ink",
+                          "content": "Сохранить подтверждения офлайн",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 15,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "I13i8",
+                      "name": "MDAC Step / 04",
+                      "width": "fill_container",
+                      "height": 54,
+                      "stroke": "#EAD8C5",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "c4zL2X",
+                          "name": "MDAC Step Number / 04",
+                          "fill": "$mh-amber",
+                          "content": "04",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iaesf",
+                          "name": "MDAC Step Text / 04",
+                          "fill": "$mh-ink",
+                          "content": "Держать вместе с паспортами",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 15,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mOlvs",
+              "name": "Content Filters",
+              "width": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "cLswn",
+                  "type": "ref",
+                  "ref": "Juufd",
+                  "name": "Content Filter / Все",
+                  "descendants": {
+                    "WBSou": {
+                      "fill": "#FFFFFF"
+                    },
+                    "Ayz2l": {
+                      "content": "Все",
+                      "fill": "#FFFFFF"
+                    }
+                  }
+                },
+                {
+                  "id": "rgnRP",
+                  "type": "ref",
+                  "ref": "Juufd",
+                  "name": "Content Filter / Малайзия",
+                  "descendants": {
+                    "WBSou": {
+                      "fill": "#1F7A52"
+                    },
+                    "Ayz2l": {
+                      "content": "Малайзия",
+                      "fill": "#1F7A52"
+                    }
+                  }
+                },
+                {
+                  "id": "YKH3O",
+                  "type": "ref",
+                  "ref": "Juufd",
+                  "name": "Content Filter / До вылета",
+                  "descendants": {
+                    "WBSou": {
+                      "fill": "#2458D3"
+                    },
+                    "Ayz2l": {
+                      "content": "До вылета",
+                      "fill": "#2458D3"
+                    }
+                  }
+                },
+                {
+                  "id": "BFkHv",
+                  "type": "ref",
+                  "ref": "Juufd",
+                  "name": "Content Filter / Перед рейсом",
+                  "descendants": {
+                    "WBSou": {
+                      "fill": "#B86416"
+                    },
+                    "Ayz2l": {
+                      "content": "Перед рейсом",
+                      "fill": "#B86416"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Z9KM3",
+              "name": "Checklist Columns",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "trjlH",
+                  "name": "Checklist Column Left",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vuQum",
+                      "name": "Section / Перед вылетом",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "stroke": "$mh-line",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rtf6V",
+                          "name": "Section Header / Перед вылетом",
+                          "width": "fill_container",
+                          "height": 58,
+                          "fill": "#FAFBF8",
+                          "stroke": "$mh-line",
+                          "strokeWidth": {
+                            "bottom": 1
+                          },
+                          "padding": [
+                            0,
+                            18
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "i80SR2",
+                              "name": "Section Title / Перед вылетом",
+                              "fill": "$mh-ink",
+                              "content": "Перед вылетом",
+                              "fontFamily": "$mh-font-head",
+                              "fontSize": 17,
+                              "fontWeight": "760"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "iWwwr",
+                              "name": "Section Count / Перед вылетом",
+                              "height": 28,
+                              "fill": "#EEF1EC",
+                              "padding": [
+                                0,
+                                10
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "lw3og",
+                                  "name": "Section Count Label / Перед вылетом",
+                                  "fill": "$mh-muted",
+                                  "content": "1",
+                                  "fontFamily": "$mh-font-data",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nuusO",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Заполнить MDAC отдельно на маму и сына и с",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Заполнить MDAC отдельно на маму и сына и сохранить оба подтверждения."
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kTl6S",
+                      "name": "Section / Виза студента",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "stroke": "$mh-line",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tHpbH",
+                          "name": "Section Header / Виза студента",
+                          "width": "fill_container",
+                          "height": 58,
+                          "fill": "#FAFBF8",
+                          "stroke": "$mh-line",
+                          "strokeWidth": {
+                            "bottom": 1
+                          },
+                          "padding": [
+                            0,
+                            18
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jZqrb",
+                              "name": "Section Title / Виза студента",
+                              "fill": "$mh-ink",
+                              "content": "Виза студента",
+                              "fontFamily": "$mh-font-head",
+                              "fontSize": 17,
+                              "fontWeight": "760"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ttIRx",
+                              "name": "Section Count / Виза студента",
+                              "height": 28,
+                              "fill": "#EEF1EC",
+                              "padding": [
+                                0,
+                                10
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "q1hUpW",
+                                  "name": "Section Count Label / Виза студента",
+                                  "fill": "$mh-muted",
+                                  "content": "10",
+                                  "fontFamily": "$mh-font-data",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "IeHKc",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / 4 фото 35x50 мм на синем фоне, 4 штуки.",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "4 фото 35x50 мм на синем фоне, 4 штуки."
+                            }
+                          }
+                        },
+                        {
+                          "id": "p9NGGl",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Копия паспорта студента, все страницы, ори",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Копия паспорта студента, все страницы, оригинал при себе, срок от 18 месяцев."
+                            }
+                          }
+                        },
+                        {
+                          "id": "Xm9dj",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Копии паспортов обоих родителей: данные, в",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Копии паспортов обоих родителей: данные, визы, штампы въезда и выезда."
+                            }
+                          }
+                        },
+                        {
+                          "id": "jLghV",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Оригинал письма о родственных связях от по",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Оригинал письма о родственных связях от посольства в Малайзии."
+                            }
+                          }
+                        },
+                        {
+                          "id": "hzOhQ",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Свидетельство о рождении студента: перевод",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Свидетельство о рождении студента: перевод на английский и заверение."
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tdGpc",
+                      "name": "Section / Финансы",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "stroke": "$mh-line",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rxsSt",
+                          "name": "Section Header / Финансы",
+                          "width": "fill_container",
+                          "height": 58,
+                          "fill": "#FAFBF8",
+                          "stroke": "$mh-line",
+                          "strokeWidth": {
+                            "bottom": 1
+                          },
+                          "padding": [
+                            0,
+                            18
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "p8una6",
+                              "name": "Section Title / Финансы",
+                              "fill": "$mh-ink",
+                              "content": "Финансы",
+                              "fontFamily": "$mh-font-head",
+                              "fontSize": 17,
+                              "fontWeight": "760"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Wb4gH",
+                              "name": "Section Count / Финансы",
+                              "height": 28,
+                              "fill": "#EEF1EC",
+                              "padding": [
+                                0,
+                                10
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "qc9Kc",
+                                  "name": "Section Count Label / Финансы",
+                                  "fill": "$mh-muted",
+                                  "content": "4",
+                                  "fontFamily": "$mh-font-data",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Spp4L",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Банковская выписка за 3 месяца, остаток от",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Банковская выписка за 3 месяца, остаток от 10 000 RM на конец каждого месяца."
+                            }
+                          }
+                        },
+                        {
+                          "id": "XnPw1",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Если счет на имя отца: копия карты мамы и ",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Если счет на имя отца: копия карты мамы и 3 чека снятия по 500 RM."
+                            }
+                          }
+                        },
+                        {
+                          "id": "rA7KY",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Чеки расходов в Малайзии за последние 3 ме",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Чеки расходов в Малайзии за последние 3 месяца."
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fiBaF",
+                  "name": "Checklist Column Right",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EjBYw",
+                      "name": "Section / Виза опекуна",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "stroke": "$mh-line",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "sQgDu",
+                          "name": "Section Header / Виза опекуна",
+                          "width": "fill_container",
+                          "height": 58,
+                          "fill": "#FAFBF8",
+                          "stroke": "$mh-line",
+                          "strokeWidth": {
+                            "bottom": 1
+                          },
+                          "padding": [
+                            0,
+                            18
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "z0G3Ot",
+                              "name": "Section Title / Виза опекуна",
+                              "fill": "$mh-ink",
+                              "content": "Виза опекуна",
+                              "fontFamily": "$mh-font-head",
+                              "fontSize": 17,
+                              "fontWeight": "760"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "qL4RP",
+                              "name": "Section Count / Виза опекуна",
+                              "height": 28,
+                              "fill": "#EEF1EC",
+                              "padding": [
+                                0,
+                                10
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "S7hh0",
+                                  "name": "Section Count Label / Виза опекуна",
+                                  "fill": "$mh-muted",
+                                  "content": "6",
+                                  "fontFamily": "$mh-font-data",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "FKupV",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / 4 фото паспортного размера на синем фоне д",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "4 фото паспортного размера на синем фоне для каждого заявителя."
+                            }
+                          }
+                        },
+                        {
+                          "id": "k8WHI",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Оригинал паспорта каждого заявителя, дейст",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Оригинал паспорта каждого заявителя, действителен минимум 18 месяцев."
+                            }
+                          }
+                        },
+                        {
+                          "id": "pOdGJ",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Письмо о родстве из посольства в Малайзии ",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Письмо о родстве из посольства в Малайзии на всех членов семьи."
+                            }
+                          }
+                        },
+                        {
+                          "id": "YNPco",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Свидетельства о рождении детей: перевод и ",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Свидетельства о рождении детей: перевод и заверение."
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "F9HQxB",
+                      "name": "Section / Паспорта и согласия",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "stroke": "$mh-line",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "A4VWmY",
+                          "name": "Section Header / Паспорта и согласия",
+                          "width": "fill_container",
+                          "height": 58,
+                          "fill": "#FAFBF8",
+                          "stroke": "$mh-line",
+                          "strokeWidth": {
+                            "bottom": 1
+                          },
+                          "padding": [
+                            0,
+                            18
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qUqW3",
+                              "name": "Section Title / Паспорта и согласия",
+                              "fill": "$mh-ink",
+                              "content": "Паспорта и согласия",
+                              "fontFamily": "$mh-font-head",
+                              "fontSize": 17,
+                              "fontWeight": "760"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "RpbO8",
+                              "name": "Section Count / Паспорта и согласия",
+                              "height": 28,
+                              "fill": "#EEF1EC",
+                              "padding": [
+                                0,
+                                10
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "yS4RY",
+                                  "name": "Section Count Label / Паспорта и согласия",
+                                  "fill": "$mh-muted",
+                                  "content": "6",
+                                  "fontFamily": "$mh-font-data",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "r4Eyh",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Студент: копия первой страницы паспорта и ",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Студент: копия первой страницы паспорта и визы."
+                            }
+                          }
+                        },
+                        {
+                          "id": "xwNQj",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Отец: копия страницы с данными и действующ",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Отец: копия страницы с данными и действующей визой."
+                            }
+                          }
+                        },
+                        {
+                          "id": "IhVWX",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Уточнить у школы, нужно ли нотариальное со",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Уточнить у школы, нужно ли нотариальное согласие отца."
+                            }
+                          }
+                        },
+                        {
+                          "id": "Zmyd6",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Старый и новый паспорт: письмо-подтвержден",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Старый и новый паспорт: письмо-подтверждение от посольства."
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xFibN",
+                      "name": "Section / Финальный пакет",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "stroke": "$mh-line",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Gqcty",
+                          "name": "Section Header / Финальный пакет",
+                          "width": "fill_container",
+                          "height": 58,
+                          "fill": "#FAFBF8",
+                          "stroke": "$mh-line",
+                          "strokeWidth": {
+                            "bottom": 1
+                          },
+                          "padding": [
+                            0,
+                            18
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "OEwN2",
+                              "name": "Section Title / Финальный пакет",
+                              "fill": "$mh-ink",
+                              "content": "Финальный пакет",
+                              "fontFamily": "$mh-font-head",
+                              "fontSize": 17,
+                              "fontWeight": "760"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ovCaB",
+                              "name": "Section Count / Финальный пакет",
+                              "height": 28,
+                              "fill": "#EEF1EC",
+                              "padding": [
+                                0,
+                                10
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "HZfht",
+                                  "name": "Section Count Label / Финальный пакет",
+                                  "fill": "$mh-muted",
+                                  "content": "4",
+                                  "fontFamily": "$mh-font-data",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "PtNxv",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Медицинская страховка, оформленная в Малай",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Медицинская страховка, оформленная в Малайзии только через школу."
+                            }
+                          }
+                        },
+                        {
+                          "id": "NFus0",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / Квитанция об оплате визы: 650 RM или 700 R",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "Квитанция об оплате визы: 650 RM или 700 RM для отдельных стран."
+                            }
+                          }
+                        },
+                        {
+                          "id": "RWoc1",
+                          "type": "ref",
+                          "ref": "hygk6",
+                          "name": "Task / 2 формы декларации об отсутствии работы и ",
+                          "width": "fill_container",
+                          "descendants": {
+                            "bHnwU": {
+                              "content": "2 формы декларации об отсутствии работы и источнике дохода."
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "O4Nvl",
+              "name": "Data Persistence Note",
+              "width": "fill_container",
+              "height": 64,
+              "fill": "#FFFFFF",
+              "stroke": "$mh-line",
+              "strokeWidth": 1,
+              "gap": 10,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "fJDRR",
+                  "name": "Persistence Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "shield-check",
+                  "library": "lucide",
+                  "fill": "$mh-green"
+                },
+                {
+                  "type": "text",
+                  "id": "H2sP2",
+                  "name": "Persistence Text",
+                  "fill": "$mh-muted",
+                  "content": "Отметки сохраняются в аккаунте и доступны на другом устройстве.",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "veLfF",
+      "x": 1540,
+      "y": 460,
+      "name": "Mobile / Malaysia Help Redesign",
+      "clip": true,
+      "width": 390,
+      "height": 1980,
+      "fill": "$mh-bg",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "DG2G7",
+          "x": 0,
+          "y": 0,
+          "name": "Mobile Top Wash",
+          "fill": "#E9EFE8",
+          "width": 390,
+          "height": 420
+        },
+        {
+          "type": "frame",
+          "id": "hnLqk",
+          "x": 18,
+          "y": 18,
+          "name": "Mobile Nav",
+          "width": 354,
+          "height": 52,
+          "fill": "#FFFFFF",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "padding": [
+            0,
+            14
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "HrorN",
+              "name": "Mobile Brand",
+              "width": 210,
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "okpqw",
+                  "name": "Mobile Brand Kicker",
+                  "fill": "$mh-green",
+                  "content": "MALAYSIA-HELP",
+                  "fontFamily": "$mh-font-data",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "QqvSK",
+                  "name": "Mobile Brand Title",
+                  "fill": "$mh-ink",
+                  "content": "Виза IMAS",
+                  "fontFamily": "$mh-font-head",
+                  "fontSize": 15,
+                  "fontWeight": "760"
+                }
+              ]
+            },
+            {
+              "type": "icon",
+              "id": "ByNPH",
+              "name": "Mobile Menu Icon",
+              "width": 22,
+              "height": 22,
+              "icon": "menu",
+              "library": "lucide",
+              "fill": "$mh-ink"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nFgVO",
+          "x": 18,
+          "y": 90,
+          "name": "Mobile Hero",
+          "width": 354,
+          "height": 440,
+          "fill": "$mh-dark",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "fo5oG",
+              "name": "Mobile Hero Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "mashaoliynyk",
+                "link": "https://unsplash.com/@mashaoliynyk",
+                "author": "Mariya Oliynyk"
+              },
+              "width": "fill_container",
+              "height": 150,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1594671515324-ea48fea744d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg0Mjc2MzB8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "mj7te",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Mobile Hero Image Overlay",
+                  "fill": "#17201B88",
+                  "width": 354,
+                  "height": 150
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hVG1g",
+              "name": "Mobile Hero Copy",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hUsLn",
+                  "name": "Mobile Hero Kicker",
+                  "fill": "#A7DDBA",
+                  "content": "IMAS VISA CHECKLIST",
+                  "fontFamily": "$mh-font-data",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "N9wLq",
+                  "name": "Mobile Hero Headline",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Визовый штаб для мамы и сына",
+                  "lineHeight": 1.05,
+                  "fontFamily": "$mh-font-head",
+                  "fontSize": 34,
+                  "fontWeight": "760"
+                },
+                {
+                  "type": "text",
+                  "id": "MSVGx",
+                  "name": "Mobile Hero Body",
+                  "fill": "#CAD2CD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Что собрать до вылета, что закрыть в Малайзии и что подготовить перед рейсом.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "tPJ90",
+                  "name": "Mobile Hero Stats",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tJwg8",
+                      "name": "Mobile Stat / готово",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF18",
+                      "stroke": "#FFFFFF22",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 3,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MtS1W",
+                          "name": "Mobile Stat Value / готово",
+                          "fill": "#FFFFFF",
+                          "content": "18",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 22,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nFRYH",
+                          "name": "Mobile Stat Label / готово",
+                          "fill": "#CAD2CD",
+                          "content": "готово",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 10,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Vs8QT",
+                      "name": "Mobile Stat / осталось",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF18",
+                      "stroke": "#FFFFFF22",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 3,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fF5s6",
+                          "name": "Mobile Stat Value / осталось",
+                          "fill": "#FFFFFF",
+                          "content": "21",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 22,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HICQP",
+                          "name": "Mobile Stat Label / осталось",
+                          "fill": "#CAD2CD",
+                          "content": "осталось",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 10,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UF9I4",
+                      "name": "Mobile Stat / прогресс",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF18",
+                      "stroke": "#FFFFFF22",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 3,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s1lnbX",
+                          "name": "Mobile Stat Value / прогресс",
+                          "fill": "#FFFFFF",
+                          "content": "46%",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 22,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "P85JG",
+                          "name": "Mobile Stat Label / прогресс",
+                          "fill": "#CAD2CD",
+                          "content": "прогресс",
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 10,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Yha9L",
+          "x": 18,
+          "y": 548,
+          "name": "Mobile Filter Bar",
+          "width": 354,
+          "height": 54,
+          "fill": "#FFFFFF",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "gap": 7,
+          "padding": [
+            0,
+            8
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bhpqk",
+              "name": "Mobile Filter / Все",
+              "width": 68,
+              "height": 36,
+              "fill": "#171717",
+              "stroke": "#171717",
+              "strokeWidth": 1,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sQ6aT",
+                  "name": "Mobile Filter Label / Все",
+                  "fill": "#FFFFFF",
+                  "content": "Все",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "750"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZEaeG",
+              "name": "Mobile Filter / MY",
+              "width": 72,
+              "height": 36,
+              "fill": "#E7F3EA",
+              "stroke": "#D8DDD5",
+              "strokeWidth": 1,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "imLEn",
+                  "name": "Mobile Filter Label / MY",
+                  "fill": "#1F7A52",
+                  "content": "MY",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "750"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Orhlm",
+              "name": "Mobile Filter / KZ",
+              "width": 72,
+              "height": 36,
+              "fill": "#EAF0FF",
+              "stroke": "#D8DDD5",
+              "strokeWidth": 1,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "p1RL7",
+                  "name": "Mobile Filter Label / KZ",
+                  "fill": "#2458D3",
+                  "content": "KZ",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "750"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QuQ1K",
+              "name": "Mobile Filter / Рейс",
+              "width": 82,
+              "height": 36,
+              "fill": "#FFF0DF",
+              "stroke": "#D8DDD5",
+              "strokeWidth": 1,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kj1uN",
+                  "name": "Mobile Filter Label / Рейс",
+                  "fill": "#B86416",
+                  "content": "Рейс",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "750"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Oxo5f",
+          "x": 18,
+          "y": 620,
+          "name": "Mobile MDAC Card",
+          "width": 354,
+          "height": 238,
+          "fill": "#FFF7EE",
+          "stroke": "#E8CBAA",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 13,
+          "padding": 18,
+          "children": [
+            {
+              "type": "frame",
+              "id": "AHUPc",
+              "name": "Mobile MDAC Header",
+              "width": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "q4yy1",
+                  "name": "Mobile MDAC Icon",
+                  "width": 19,
+                  "height": 19,
+                  "icon": "plane",
+                  "library": "lucide",
+                  "fill": "$mh-amber"
+                },
+                {
+                  "type": "text",
+                  "id": "m2viz",
+                  "name": "Mobile MDAC Title",
+                  "fill": "$mh-ink",
+                  "content": "MDAC за 3 дня",
+                  "fontFamily": "$mh-font-head",
+                  "fontSize": 21,
+                  "fontWeight": "760"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "atz59",
+              "name": "Mobile MDAC Body",
+              "fill": "#66584A",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Заполнить бесплатно на официальном imi.gov.my отдельно для каждого путешественника.",
+              "lineHeight": 1.45,
+              "fontFamily": "$mh-font-body",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "a1Jce",
+              "name": "Mobile MDAC Check / Паспорт и email",
+              "width": "fill_container",
+              "gap": 9,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "Xmnsk",
+                  "name": "Mobile MDAC Check Icon / Паспорт и email",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$mh-amber"
+                },
+                {
+                  "type": "text",
+                  "id": "Cyt0x",
+                  "name": "Mobile MDAC Check Text / Паспорт и email",
+                  "fill": "$mh-ink",
+                  "content": "Паспорт и email",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "650"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sqdkK",
+              "name": "Mobile MDAC Check / Рейс и даты",
+              "width": "fill_container",
+              "gap": 9,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "no9iV",
+                  "name": "Mobile MDAC Check Icon / Рейс и даты",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$mh-amber"
+                },
+                {
+                  "type": "text",
+                  "id": "M9UVZ",
+                  "name": "Mobile MDAC Check Text / Рейс и даты",
+                  "fill": "$mh-ink",
+                  "content": "Рейс и даты",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "650"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dUQU7",
+              "name": "Mobile MDAC Check / Адрес жилья",
+              "width": "fill_container",
+              "gap": 9,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "NFboq",
+                  "name": "Mobile MDAC Check Icon / Адрес жилья",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$mh-amber"
+                },
+                {
+                  "type": "text",
+                  "id": "Ve6fN",
+                  "name": "Mobile MDAC Check Text / Адрес жилья",
+                  "fill": "$mh-ink",
+                  "content": "Адрес жилья",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "650"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "C52pP",
+              "name": "Mobile MDAC Check / Скриншот подтверждения",
+              "width": "fill_container",
+              "gap": 9,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "YofYS",
+                  "name": "Mobile MDAC Check Icon / Скриншот подтверждения",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$mh-amber"
+                },
+                {
+                  "type": "text",
+                  "id": "A54ur",
+                  "name": "Mobile MDAC Check Text / Скриншот подтверждения",
+                  "fill": "$mh-ink",
+                  "content": "Скриншот подтверждения",
+                  "fontFamily": "$mh-font-body",
+                  "fontSize": 12,
+                  "fontWeight": "650"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LXmZj",
+          "x": 18,
+          "y": 878,
+          "name": "Mobile Checklist",
+          "width": 354,
+          "height": 990,
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "frame",
+              "id": "A7lge",
+              "name": "Mobile Section / Сначала",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": "$mh-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GvNWx",
+                  "name": "Mobile Section Header / Сначала",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FAFBF8",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Fsu4N",
+                      "name": "Mobile Section Title / Сначала",
+                      "fill": "$mh-ink",
+                      "content": "Сначала",
+                      "fontFamily": "$mh-font-head",
+                      "fontSize": 15,
+                      "fontWeight": "760"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "H7NeM",
+                      "name": "Mobile Section Count / Сначала",
+                      "height": 26,
+                      "fill": "#EEF1EC",
+                      "padding": [
+                        0,
+                        9
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "id2ty",
+                          "name": "Mobile Section Count Label / Сначала",
+                          "fill": "$mh-muted",
+                          "content": "3",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "z3vqi",
+                  "name": "Mobile Task / MDAC на маму и сына за 3 дня до пр",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "I54DM",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#B86416",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w5PtMu",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "LBb4U",
+                          "name": "Mobile Task Badge",
+                          "fill": "#FFF0DF",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "jm27P",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#B86416",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "Y7Fgbp",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#B86416",
+                              "content": "Перед рейсом",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "fY9m0",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "MDAC на маму и сына за 3 дня до прилета.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JTCEx",
+                  "name": "Mobile Task / Паспорта: все страницы, визы и шта",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Z7kKM",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#2458D3",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XoM6Z",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rjikY",
+                          "name": "Mobile Task Badge",
+                          "fill": "#EAF0FF",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "okn4e",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#2458D3",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "Y1218",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#2458D3",
+                              "content": "До вылета",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "K2OF2j",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Паспорта: все страницы, визы и штампы.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FFmaq",
+                  "name": "Mobile Task / Фото 35x50 мм на синем фоне.",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "d7GtI",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#1F7A52",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "V3IgLD",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cTbon",
+                          "name": "Mobile Task Badge",
+                          "fill": "#E7F3EA",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "lCTJx",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#1F7A52",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "M1IqqO",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#1F7A52",
+                              "content": "Малайзия",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Aroyo",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Фото 35x50 мм на синем фоне.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Zp5Iz",
+              "name": "Mobile Section / Финансы",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": "$mh-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NoH5i",
+                  "name": "Mobile Section Header / Финансы",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FAFBF8",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "C5qhe",
+                      "name": "Mobile Section Title / Финансы",
+                      "fill": "$mh-ink",
+                      "content": "Финансы",
+                      "fontFamily": "$mh-font-head",
+                      "fontSize": 15,
+                      "fontWeight": "760"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mueoq",
+                      "name": "Mobile Section Count / Финансы",
+                      "height": 26,
+                      "fill": "#EEF1EC",
+                      "padding": [
+                        0,
+                        9
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Kqa9a",
+                          "name": "Mobile Section Count Label / Финансы",
+                          "fill": "$mh-muted",
+                          "content": "3",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K2i6aN",
+                  "name": "Mobile Task / Выписка за 3 месяца с остатком от ",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KY1pF",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#2458D3",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jKoiQ",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mtDhw",
+                          "name": "Mobile Task Badge",
+                          "fill": "#EAF0FF",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "Q0sXiM",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#2458D3",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "ZA4Wr",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#2458D3",
+                              "content": "До вылета",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "GA71X",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Выписка за 3 месяца с остатком от 10 000 RM.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oBlHE",
+                  "name": "Mobile Task / Чеки расходов в Малайзии за послед",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "of6dD",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#1F7A52",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uD3Kb",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Y9I3o",
+                          "name": "Mobile Task Badge",
+                          "fill": "#E7F3EA",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "p50Grf",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#1F7A52",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "KvVR8",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#1F7A52",
+                              "content": "Малайзия",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "NCTif",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Чеки расходов в Малайзии за последние 3 месяца.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZmytY",
+                  "name": "Mobile Task / Квитанции аренды и коммунальных пл",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rFqEj",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#1F7A52",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UV5om",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OpZBl",
+                          "name": "Mobile Task Badge",
+                          "fill": "#E7F3EA",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "sJXPN",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#1F7A52",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "BBiOX",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#1F7A52",
+                              "content": "Малайзия",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "pdPMZ",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Квитанции аренды и коммунальных платежей.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "IOe3y",
+              "name": "Mobile Section / Опекун",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": "$mh-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "DMGo8",
+                  "name": "Mobile Section Header / Опекун",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FAFBF8",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XSs8k",
+                      "name": "Mobile Section Title / Опекун",
+                      "fill": "$mh-ink",
+                      "content": "Опекун",
+                      "fontFamily": "$mh-font-head",
+                      "fontSize": 15,
+                      "fontWeight": "760"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uRUGk",
+                      "name": "Mobile Section Count / Опекун",
+                      "height": 26,
+                      "fill": "#EEF1EC",
+                      "padding": [
+                        0,
+                        9
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZDRag",
+                          "name": "Mobile Section Count Label / Опекун",
+                          "fill": "$mh-muted",
+                          "content": "3",
+                          "fontFamily": "$mh-font-data",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c5oXqC",
+                  "name": "Mobile Task / Письмо о родстве из посольства в М",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QjMt4",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#2458D3",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vmvFA",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kavPK",
+                          "name": "Mobile Task Badge",
+                          "fill": "#EAF0FF",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "KWVHJ",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#2458D3",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "LQ2qF",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#2458D3",
+                              "content": "До вылета",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "esb5K",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Письмо о родстве из посольства в Малайзии.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "F1loG",
+                  "name": "Mobile Task / Свидетельство о рождении с перевод",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HSKrY",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#2458D3",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "k5KIm",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "jYmTh",
+                          "name": "Mobile Task Badge",
+                          "fill": "#EAF0FF",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "DzgDP",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#2458D3",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "YNlFh",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#2458D3",
+                              "content": "До вылета",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "HNIJR",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Свидетельство о рождении с переводом и заверением.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "F3hNa",
+                  "name": "Mobile Task / Уточнить согласие отца у школы.",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$mh-line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 11,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AR8aA",
+                      "name": "Mobile Task Checkbox",
+                      "width": 22,
+                      "height": 22,
+                      "fill": "#FFFFFF",
+                      "stroke": "#2458D3",
+                      "strokeWidth": 2,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "C8pCzl",
+                      "name": "Mobile Task Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "iIrw6",
+                          "name": "Mobile Task Badge",
+                          "fill": "#EAF0FF",
+                          "gap": 6,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "BTwHR",
+                              "name": "Mobile Task Badge Dot",
+                              "fill": "#2458D3",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "D7sJMC",
+                              "name": "Mobile Task Badge Label",
+                              "fill": "#2458D3",
+                              "content": "До вылета",
+                              "fontFamily": "$mh-font-body",
+                              "fontSize": 10,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "kWlYD",
+                          "name": "Mobile Task Text",
+                          "fill": "$mh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Уточнить согласие отца у школы.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "$mh-font-body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Tjbd1",
+          "x": 18,
+          "y": 1898,
+          "name": "Mobile Sync Footer",
+          "width": 354,
+          "height": 52,
+          "fill": "#FFFFFF",
+          "stroke": "$mh-line",
+          "strokeWidth": 1,
+          "gap": 9,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "IsNUJ",
+              "name": "Mobile Sync Icon",
+              "width": 17,
+              "height": 17,
+              "icon": "cloud-check",
+              "library": "lucide",
+              "fill": "$mh-green"
+            },
+            {
+              "type": "text",
+              "id": "Z13UN",
+              "name": "Mobile Sync Text",
+              "fill": "$mh-muted",
+              "content": "Сохранено в аккаунте",
+              "fontFamily": "$mh-font-body",
+              "fontSize": 12,
+              "fontWeight": "650"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "mh-bg": {
+      "type": "color",
+      "value": "#F4F6F1"
+    },
+    "mh-panel": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "mh-ink": {
+      "type": "color",
+      "value": "#171717"
+    },
+    "mh-muted": {
+      "type": "color",
+      "value": "#626A66"
+    },
+    "mh-line": {
+      "type": "color",
+      "value": "#D8DDD5"
+    },
+    "mh-green": {
+      "type": "color",
+      "value": "#1F7A52"
+    },
+    "mh-blue": {
+      "type": "color",
+      "value": "#2458D3"
+    },
+    "mh-amber": {
+      "type": "color",
+      "value": "#B86416"
+    },
+    "mh-red": {
+      "type": "color",
+      "value": "#B13B3B"
+    },
+    "mh-dark": {
+      "type": "color",
+      "value": "#17201B"
+    },
+    "mh-soft-green": {
+      "type": "color",
+      "value": "#E7F3EA"
+    },
+    "mh-soft-blue": {
+      "type": "color",
+      "value": "#EAF0FF"
+    },
+    "mh-soft-amber": {
+      "type": "color",
+      "value": "#FFF0DF"
+    },
+    "mh-font-head": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "mh-font-body": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "mh-font-data": {
+      "type": "string",
+      "value": "IBM Plex Mono"
+    }
+  },
+  "fileToken": "ee4792db-8d2c-4108-bcdd-32a1f3a04657"
+}
