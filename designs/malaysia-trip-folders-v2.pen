@@ -1,0 +1,1876 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "xb1sX",
+      "x": 0,
+      "y": 0,
+      "name": "Variant 2 - Special Pass Print Folders",
+      "clip": true,
+      "width": 1440,
+      "height": 1160,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "AYLHw",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 198,
+          "fill": "$ink",
+          "gap": 40,
+          "padding": [
+            44,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "EPLZr",
+              "name": "Header Text",
+              "width": 760,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "J7x0gX",
+                  "name": "Eyebrow",
+                  "fill": "#FFFFFF",
+                  "content": "SPECIAL PASS + STUDENT PASS",
+                  "fontFamily": "$fontM",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "RPASz",
+                  "name": "Title",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "3 папки для Immigration Malaysia",
+                  "lineHeight": 1.02,
+                  "fontFamily": "$fontH",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "DeTHd",
+                  "name": "Subtitle",
+                  "fill": "#D8D8D8",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Абдуали • Бахыткуль • Immigration: что печатать сейчас и что держать в резерве",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$fontB",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Qgosd",
+              "name": "Deadline Panel",
+              "width": "fill_container",
+              "stroke": "#FFFFFF66",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xihqh",
+                  "name": "Deadline Label",
+                  "fill": "#FFFFFF",
+                  "content": "НЕ ДОПУСТИТЬ OVERSTAY",
+                  "fontFamily": "$fontM",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "SrWoK",
+                  "name": "Deadline Date",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "до 11 сентября 2026",
+                  "fontFamily": "$fontH",
+                  "fontSize": 30,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vaJKS",
+                  "name": "Deadline Note",
+                  "fill": "#D8D8D8",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Приехать заранее: 7:30–8:00, мама и сын вместе, оригиналы паспортов с собой.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$fontB",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DRvuP",
+          "name": "Main Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$bg",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": [
+            30,
+            56,
+            36,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "BIyBJ",
+              "name": "Status Legend",
+              "width": "fill_container",
+              "height": 62,
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nJj2J",
+                  "name": "Legend ТОЧНО ПЕЧАТАТЬ",
+                  "height": 42,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 10,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "mydUN",
+                      "name": "Status Dot",
+                      "fill": "$green",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "text",
+                      "id": "lDfS5",
+                      "name": "Status Text",
+                      "fill": "$ink",
+                      "content": "ТОЧНО ПЕЧАТАТЬ — Документы для основной подачи",
+                      "fontFamily": "$fontB",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G0Pzx",
+                  "name": "Legend РЕЗЕРВ",
+                  "height": 42,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 10,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "sfChy",
+                      "name": "Status Dot",
+                      "fill": "$amber",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "text",
+                      "id": "U8k4v",
+                      "name": "Status Text",
+                      "fill": "$ink",
+                      "content": "РЕЗЕРВ — Взять с собой, отдавать по запросу",
+                      "fontFamily": "$fontB",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kFYZM",
+                  "name": "Legend НЕ ПЕЧАТАТЬ",
+                  "height": 42,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 10,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "tmssq",
+                      "name": "Status Dot",
+                      "fill": "$red",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "text",
+                      "id": "cYaUr",
+                      "name": "Status Text",
+                      "fill": "$ink",
+                      "content": "НЕ ПЕЧАТАТЬ — Не класть в текущий пакет",
+                      "fontFamily": "$fontB",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vfXEg",
+              "name": "Folder Columns",
+              "width": "fill_container",
+              "height": 548,
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "k3xLG",
+                  "name": "Folder 01 / Абдуали",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xvwXr",
+                      "name": "Folder Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GyA5M",
+                          "name": "Folder Name",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "01 / Абдуали",
+                          "lineHeight": 1.08,
+                          "fontFamily": "$fontH",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "H7qFX",
+                          "name": "Folder Tag",
+                          "stroke": "$blue",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "IFscQ",
+                              "name": "Tag Dot",
+                              "fill": "$blue",
+                              "width": 8,
+                              "height": 8
+                            },
+                            {
+                              "type": "text",
+                              "id": "frSm0",
+                              "name": "Tag Label",
+                              "fill": "$blue",
+                              "content": "STUDENT PASS",
+                              "fontFamily": "$fontM",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qY0Ae",
+                      "name": "Document List",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gwU8I",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "CbB7I",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "vqdOB",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "VPEmT",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "WfWom",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Новый паспорт — все страницы",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SSN8u",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "EbqWQ",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "i4LrLi",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "H01Ee",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "W8eywN",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Старый паспорт: data page + Malaysia stamps",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fiSid",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "Pg0FP",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SYILd",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "dcjH0",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "a7gld",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "4 фото 35×50 мм, синий фон",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "YvDZC",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "A43ci",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "mxlMB",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "O9XD8A",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "oA938",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Birth certificate + English translation",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pz56B",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "r5b8XS",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "osS0X",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "FaVNB",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "ZhfBn",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Offer Letter 16129 — полный PDF + 2 копии стр. 1",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hl48I",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "Eeexu",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "QaI4B",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Nwi1r",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "zQdHN",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Квитанции IMAS / Visa Fee Receipt",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TvZJP",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "G9jzx9",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "z0lhl",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "l5LcRM",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Ждать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "drYlg",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Confirmation Letter IMAS для Immigration",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dWpNr",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "BrG4c",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "OTbIb",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "CB4yi",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Резерв",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "VA8AZ",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Release Letter / Embassy Family Letter, если появятся",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VjcfZ",
+                  "name": "Folder 02 / Бахыткуль",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "oxeUb",
+                      "name": "Folder Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uNrmY",
+                          "name": "Folder Name",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "02 / Бахыткуль",
+                          "lineHeight": 1.08,
+                          "fontFamily": "$fontH",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "yjGTz",
+                          "name": "Folder Tag",
+                          "stroke": "$amber",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "DvyhT",
+                              "name": "Tag Dot",
+                              "fill": "$amber",
+                              "width": 8,
+                              "height": 8
+                            },
+                            {
+                              "type": "text",
+                              "id": "qKSl9",
+                              "name": "Tag Label",
+                              "fill": "$amber",
+                              "content": "GUARDIAN",
+                              "fontFamily": "$fontM",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rHhC3",
+                      "name": "Document List",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MpImi",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "zyFaI",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "uki0k",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "v6158",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "f8SdK",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Паспорт мамы — все страницы",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "o3pbN",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "w9JDwZ",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "b1tFK",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "r0E84u",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "nwOgj",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "4 фото 35×50 мм, синий фон",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qdTmp",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "Z9LL98",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SaP7n",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "QbFrs",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "atrrW",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Birth certificate Абдуали + English translation",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UcnHk",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "pSmgJ",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SrXr9",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "M9odQ",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "tK8Oj",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Копия нового паспорта Абдуали",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JM5Z8",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "h3I0b",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "bCXmZ",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "YFIFd",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Резерв",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "e0NijW",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Tenancy Agreement с LHDN stamp",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SPRox",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "eGoKt",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "k7ue3O",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "eVBZQ",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Резерв",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "kbea5",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Bank statements 3 месяца / RM10,000",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Xw8bM",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "cLDoz",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "i3mBp",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "DpU83",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Резерв",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "A2FTgX",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Employment Letter отца",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i2vtnl",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "il9jp",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "oiThP",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "n2X9YS",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Позже",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "e9d73",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Student Pass Абдуали после получения",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "g74gO0",
+                  "name": "Folder 03 / Immigration",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u6rbaM",
+                      "name": "Folder Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "x6sxQZ",
+                          "name": "Folder Name",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "03 / Immigration",
+                          "lineHeight": 1.08,
+                          "fontFamily": "$fontH",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E11HfJ",
+                          "name": "Folder Tag",
+                          "stroke": "$green",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "EaXGo",
+                              "name": "Tag Dot",
+                              "fill": "$green",
+                              "width": 8,
+                              "height": 8
+                            },
+                            {
+                              "type": "text",
+                              "id": "qCIhy",
+                              "name": "Tag Label",
+                              "fill": "$green",
+                              "content": "SPECIAL PASS NOW",
+                              "fontFamily": "$fontM",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BM1Ew",
+                      "name": "Document List",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cYzRD",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "aRM9A",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "tzjsV",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "j4CxtH",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Wrsz6",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Паспорта: data page + въездной штамп / current pass",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E59ydd",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "kcbwU",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "FaD9i",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Gc6ju",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "c13585",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "IMM.55 — по 2 экземпляра на каждого",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "DKUl7",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "Z0TmQ",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "TuIwI",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "dVi2B",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "g4RC1L",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Offer Letter IMAS: полный PDF + первая страница",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IUBVr",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "Fa4C5",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "GbnbI",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "TmH1J",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "f8P3GW",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Birth certificate + English translation",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MnYcG",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "kTrvZ",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "w2u2aO",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "U10iA",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Печатать",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "it6CA",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Квитанции оплаты школы",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "U1q8F",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "ijsXg",
+                              "name": "Status Bar",
+                              "fill": "$green",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xsESB",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "X8pX0q",
+                                  "name": "Doc Status",
+                                  "fill": "$green",
+                                  "content": "Главное",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "jNth2",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Confirmation Letter IMAS, как только придёт",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gl8Bk",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "cPQ0k",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "TvIyw",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "GJXne",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Резерв",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "C7rqk",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Старый паспорт Абдуали для объяснения MOE",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "l2AKxr",
+                          "name": "Doc Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "OrFCR",
+                              "name": "Status Bar",
+                              "fill": "$amber",
+                              "width": 4,
+                              "height": 42
+                            },
+                            {
+                              "type": "frame",
+                              "id": "NJ5q6",
+                              "name": "Doc Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "PSzR9",
+                                  "name": "Doc Status",
+                                  "fill": "$amber",
+                                  "content": "Резерв",
+                                  "fontFamily": "$fontM",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "juSNn",
+                                  "name": "Doc Title",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Tenancy + билет/itinerary, если есть",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "$fontB",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WEAoS",
+              "name": "Bottom Info",
+              "width": "fill_container",
+              "height": 240,
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Z4TcM",
+                  "name": "Immigration Address",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$soft",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FjFPV",
+                      "name": "Address Label",
+                      "fill": "$blue",
+                      "content": "АДРЕС MIGRATION",
+                      "fontFamily": "$fontM",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qQk9e",
+                      "name": "Address Text",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Immigration Department of Malaysia Headquarters\nNo. 15, Block 2G4, Persiaran Perdana, Presint 2, 62550 Putrajaya\nVisa, Pass & Permit Division",
+                      "lineHeight": 1.35,
+                      "fontFamily": "$fontB",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aAHGO",
+                      "name": "Officer Phrase",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Фраза: We would like to apply for a Special Pass while waiting for my son’s Student Pass.",
+                      "lineHeight": 1.3,
+                      "fontFamily": "$fontB",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G388p",
+                  "name": "Printing Nearby",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$soft",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NjZ26",
+                      "name": "Print Label",
+                      "fill": "$blue",
+                      "content": "ГДЕ ПЕЧАТАТЬ РЯДОМ",
+                      "fontFamily": "$fontM",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "f4wNK",
+                      "name": "Print Text",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "1. Printec Putrajaya — Shaftsbury Putrajaya, Presint 1\n2. Retech Print Shop — 6, Jalan Diplomatik 2/1, Presint 15",
+                      "lineHeight": 1.35,
+                      "fontFamily": "$fontB",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "avgxf",
+                      "name": "Print Note",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Практичнее: Printec в Presint 1. Документы лучше распечатать до визита, рядом с Presint 2 точка не гарантирована.",
+                      "lineHeight": 1.3,
+                      "fontFamily": "$fontB",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "soft": {
+      "type": "color",
+      "value": "#F7F7F7"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#666666"
+    },
+    "line": {
+      "type": "color",
+      "value": "#E5E5E5"
+    },
+    "blue": {
+      "type": "color",
+      "value": "#0066FF"
+    },
+    "green": {
+      "type": "color",
+      "value": "#137333"
+    },
+    "amber": {
+      "type": "color",
+      "value": "#B06000"
+    },
+    "red": {
+      "type": "color",
+      "value": "#B3261E"
+    },
+    "fontH": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "fontB": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "fontM": {
+      "type": "string",
+      "value": "Geist Mono"
+    }
+  },
+  "fileToken": "fc8d48dd-6961-4fba-af28-4eef9ff3da61"
+}
