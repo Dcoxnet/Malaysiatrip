@@ -1,0 +1,1723 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "u7x4KD",
+      "x": 0,
+      "y": 0,
+      "name": "Navigation Components",
+      "width": 1440,
+      "height": 360,
+      "fill": "#F2F4F6",
+      "gap": 48,
+      "padding": 32,
+      "children": [
+        {
+          "type": "frame",
+          "id": "H3flOs",
+          "name": "Desktop Destination Navigator",
+          "reusable": true,
+          "clip": true,
+          "width": 820,
+          "height": 260,
+          "fill": "$nav-bg",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "IeDwh",
+              "name": "Desktop Utility Bar",
+              "width": "fill_container",
+              "height": 76,
+              "fill": "$nav-bg",
+              "padding": [
+                0,
+                28
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "inIMf",
+                  "name": "Desktop Brand Lockup",
+                  "gap": 14,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "wq8Aw",
+                      "name": "Desktop Brand Mark",
+                      "fill": "$nav-blue",
+                      "width": 12,
+                      "height": 32
+                    },
+                    {
+                      "type": "text",
+                      "id": "s81fG7",
+                      "name": "Desktop Brand Title",
+                      "fill": "$nav-inverse",
+                      "content": "Семейные документы",
+                      "fontFamily": "$font-heading",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "AOOhc",
+                  "name": "Desktop Shared Scope",
+                  "fill": "#FFFFFF99",
+                  "content": "Иммиграционные файлы общие",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gum0M",
+              "name": "Desktop Destination Rail",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$nav-surface",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lnIu7",
+                  "name": "Desktop Route - Иммиграция",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$nav-blue",
+                  "stroke": "$nav-line",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Uk7bg",
+                      "name": "Desktop Route Icon Row - Иммиграция",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "p3i6MX",
+                          "name": "Desktop Route Icon - Иммиграция",
+                          "width": 28,
+                          "height": 28,
+                          "icon": "landmark",
+                          "library": "lucide",
+                          "fill": "$nav-ink"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ezI9g",
+                          "name": "Desktop Route Count - Иммиграция",
+                          "fill": "$nav-ink",
+                          "content": "24",
+                          "fontFamily": "$font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "HtAqK",
+                      "name": "Desktop Route Title - Иммиграция",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Иммиграция",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-heading",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LIIWD",
+                      "name": "Desktop Route Subtitle - Иммиграция",
+                      "fill": "#1A1A1ACC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Общие файлы",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oQzrR",
+                  "name": "Desktop Route - Виза школы — Мама",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$nav-surface",
+                  "stroke": "$nav-line",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "g1nfR8",
+                      "name": "Desktop Route Icon Row - Виза школы — Мама",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "NCtzD",
+                          "name": "Desktop Route Icon - Виза школы — Мама",
+                          "width": 28,
+                          "height": 28,
+                          "icon": "graduation-cap",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vAFPc",
+                          "name": "Desktop Route Count - Виза школы — Мама",
+                          "fill": "$nav-muted",
+                          "content": "08",
+                          "fontFamily": "$font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "zKOey",
+                      "name": "Desktop Route Title - Виза школы — Мама",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Виза школы — Мама",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-heading",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PXgHk",
+                      "name": "Desktop Route Subtitle - Виза школы — Мама",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Отдельная подборка",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TScgZ",
+                  "name": "Desktop Route - Виза школы — Братишка",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$nav-surface",
+                  "stroke": "$nav-line",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "d85Fz",
+                      "name": "Desktop Route Icon Row - Виза школы — Братишка",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Z0eVT",
+                          "name": "Desktop Route Icon - Виза школы — Братишка",
+                          "width": 28,
+                          "height": 28,
+                          "icon": "school",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XUhBu",
+                          "name": "Desktop Route Count - Виза школы — Братишка",
+                          "fill": "$nav-muted",
+                          "content": "08",
+                          "fontFamily": "$font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "l0Sl1",
+                      "name": "Desktop Route Title - Виза школы — Братишка",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Виза школы — Братишка",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-heading",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IICRV",
+                      "name": "Desktop Route Subtitle - Виза школы — Братишка",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Отдельная подборка",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "n2E2hZ",
+          "name": "Mobile Destination Navigator",
+          "reusable": true,
+          "clip": true,
+          "width": 330,
+          "height": 300,
+          "fill": "$nav-bg",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": 18,
+          "children": [
+            {
+              "type": "frame",
+              "id": "W9sQx5",
+              "name": "Mobile Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "D3iCo",
+                  "name": "Mobile Brand Title",
+                  "fill": "$nav-inverse",
+                  "content": "Документы",
+                  "fontFamily": "$font-heading",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "HVl5e",
+                  "name": "Mobile Shared Note",
+                  "fill": "#FFFFFF99",
+                  "content": "общие файлы",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NbG4O",
+              "name": "Mobile Route - Иммиграция",
+              "width": "fill_container",
+              "height": 62,
+              "fill": "$nav-blue",
+              "stroke": "$nav-blue",
+              "strokeWidth": 1,
+              "gap": 12,
+              "padding": [
+                0,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "bgW7u",
+                  "name": "Mobile Route Icon - Иммиграция",
+                  "width": 22,
+                  "height": 22,
+                  "icon": "landmark",
+                  "library": "lucide",
+                  "fill": "$nav-ink"
+                },
+                {
+                  "type": "frame",
+                  "id": "hdKc3",
+                  "name": "Mobile Route Text - Иммиграция",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jIi60",
+                      "name": "Mobile Route Title - Иммиграция",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Иммиграция",
+                      "fontFamily": "$font-heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "idqCW",
+                      "name": "Mobile Route Subtitle - Иммиграция",
+                      "fill": "#1A1A1ACC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Общие файлы",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "u8E5Fw",
+              "name": "Mobile Route - Виза школы — Мама",
+              "width": "fill_container",
+              "height": 62,
+              "fill": "#FFFFFF12",
+              "stroke": "#FFFFFF33",
+              "strokeWidth": 1,
+              "gap": 12,
+              "padding": [
+                0,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "eBZAW",
+                  "name": "Mobile Route Icon - Виза школы — Мама",
+                  "width": 22,
+                  "height": 22,
+                  "icon": "graduation-cap",
+                  "library": "lucide",
+                  "fill": "$nav-inverse"
+                },
+                {
+                  "type": "frame",
+                  "id": "eOBUI",
+                  "name": "Mobile Route Text - Виза школы — Мама",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TAglB",
+                      "name": "Mobile Route Title - Виза школы — Мама",
+                      "fill": "$nav-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Виза школы — Мама",
+                      "fontFamily": "$font-heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GFrPF",
+                      "name": "Mobile Route Subtitle - Виза школы — Мама",
+                      "fill": "#FFFFFF99",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Отдельная подборка",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jEmjx",
+              "name": "Mobile Route - Виза школы — Братишка",
+              "width": "fill_container",
+              "height": 62,
+              "fill": "#FFFFFF12",
+              "stroke": "#FFFFFF33",
+              "strokeWidth": 1,
+              "gap": 12,
+              "padding": [
+                0,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "n1iKF",
+                  "name": "Mobile Route Icon - Виза школы — Братишка",
+                  "width": 22,
+                  "height": 22,
+                  "icon": "school",
+                  "library": "lucide",
+                  "fill": "$nav-inverse"
+                },
+                {
+                  "type": "frame",
+                  "id": "A3Lu4",
+                  "name": "Mobile Route Text - Виза школы — Братишка",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v2M27",
+                      "name": "Mobile Route Title - Виза школы — Братишка",
+                      "fill": "$nav-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Виза школы — Братишка",
+                      "fontFamily": "$font-heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qbFzd",
+                      "name": "Mobile Route Subtitle - Виза школы — Братишка",
+                      "fill": "#FFFFFF99",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Отдельная подборка",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "GHTOC",
+      "x": 0,
+      "y": 456,
+      "name": "Desktop Dashboard Context",
+      "clip": true,
+      "width": 1440,
+      "height": 980,
+      "fill": "$nav-surface",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "NRtsH",
+          "type": "ref",
+          "ref": "H3flOs",
+          "name": "Desktop Navigation Instance",
+          "width": "fill_container",
+          "height": 260
+        },
+        {
+          "type": "frame",
+          "id": "CAuRT",
+          "name": "Desktop Document Area",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$nav-panel",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            36,
+            48
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "sUPRA",
+              "name": "Desktop Section Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OkJja",
+                  "name": "Desktop Header Copy",
+                  "width": 620,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T3XgHI",
+                      "name": "Desktop Section Eyebrow",
+                      "fill": "$nav-muted",
+                      "content": "Текущий раздел",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gm264",
+                      "name": "Desktop Section Title",
+                      "fill": "$nav-ink",
+                      "content": "Иммиграция",
+                      "fontFamily": "$font-heading",
+                      "fontSize": 34,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ljbRw",
+                      "name": "Desktop Section Description",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Общие иммиграционные файлы семьи собраны в одном разделе. Ниже показан нейтральный список документов без персональных данных.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "C3gG8",
+                  "name": "Desktop Status Strip",
+                  "fill": "$nav-surface",
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": 1,
+                  "gap": 28,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "F0mpue",
+                      "name": "Desktop Status - Файлов",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pX3TH",
+                          "name": "Desktop Status Label - Файлов",
+                          "fill": "$nav-muted",
+                          "content": "Файлов",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "G5d0v",
+                          "name": "Desktop Status Value - Файлов",
+                          "fill": "$nav-ink",
+                          "content": "24",
+                          "fontFamily": "$font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WRWWy",
+                      "name": "Desktop Status - Нужны действия",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QVcDd",
+                          "name": "Desktop Status Label - Нужны действия",
+                          "fill": "$nav-muted",
+                          "content": "Нужны действия",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a7YNmB",
+                          "name": "Desktop Status Value - Нужны действия",
+                          "fill": "$nav-ink",
+                          "content": "3",
+                          "fontFamily": "$font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JpEBH",
+                      "name": "Desktop Status - Обновлено",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JM7wy",
+                          "name": "Desktop Status Label - Обновлено",
+                          "fill": "$nav-muted",
+                          "content": "Обновлено",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OCf3U",
+                          "name": "Desktop Status Value - Обновлено",
+                          "fill": "$nav-ink",
+                          "content": "сегодня",
+                          "fontFamily": "$font-data",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mfP5H",
+              "name": "Desktop Document List",
+              "width": "fill_container",
+              "fill": "$nav-surface",
+              "stroke": "$nav-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kSLMQ",
+                  "name": "Desktop Document Header Row",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$nav-bg",
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pEgFJ",
+                      "name": "Desktop Header Cell - Документ",
+                      "fill": "$nav-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Документ",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PQR5i",
+                      "name": "Desktop Header Cell - Категория",
+                      "fill": "$nav-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": 180,
+                      "content": "Категория",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "os9v2",
+                      "name": "Desktop Header Cell - Статус",
+                      "fill": "$nav-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Статус",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JB983",
+                      "name": "Desktop Header Cell - Обновлено",
+                      "fill": "$nav-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "Обновлено",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y6MNc",
+                  "name": "Desktop Document Row - Скан паспорта",
+                  "width": "fill_container",
+                  "height": 66,
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JrvCh",
+                      "name": "Desktop Document Cell - Скан паспорта",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "zlTvO",
+                          "name": "Desktop File Icon - Скан паспорта",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "file-text",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fDQJz",
+                          "name": "Desktop Document Name - Скан паспорта",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Скан паспорта",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "YkVU2",
+                      "name": "Desktop Document Category - Скан паспорта",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 180,
+                      "content": "Удостоверение",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vpUS8",
+                      "name": "Desktop Document Status - Скан паспорта",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Проверено",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o4goN",
+                      "name": "Desktop Document Date - Скан паспорта",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "06.09",
+                      "fontFamily": "$font-data",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "u7FNcp",
+                  "name": "Desktop Document Row - Анкета заявления",
+                  "width": "fill_container",
+                  "height": 66,
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZlWQ2",
+                      "name": "Desktop Document Cell - Анкета заявления",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Dxya9",
+                          "name": "Desktop File Icon - Анкета заявления",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "file-text",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "IQwLP",
+                          "name": "Desktop Document Name - Анкета заявления",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Анкета заявления",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "asagV",
+                      "name": "Desktop Document Category - Анкета заявления",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 180,
+                      "content": "Форма",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xwKHm",
+                      "name": "Desktop Document Status - Анкета заявления",
+                      "fill": "$nav-blue",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "К заполнению",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "eYMp4",
+                      "name": "Desktop Document Date - Анкета заявления",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "05.09",
+                      "fontFamily": "$font-data",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DAMRo",
+                  "name": "Desktop Document Row - Подтверждение адреса",
+                  "width": "fill_container",
+                  "height": 66,
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "f0aM0",
+                      "name": "Desktop Document Cell - Подтверждение адреса",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "cthr3",
+                          "name": "Desktop File Icon - Подтверждение адреса",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "file-text",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LZIRs",
+                          "name": "Desktop Document Name - Подтверждение адреса",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Подтверждение адреса",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "qr2QN",
+                      "name": "Desktop Document Category - Подтверждение адреса",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 180,
+                      "content": "Справка",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LGS6j",
+                      "name": "Desktop Document Status - Подтверждение адреса",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Ожидает",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tRJPZ",
+                      "name": "Desktop Document Date - Подтверждение адреса",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "04.09",
+                      "fontFamily": "$font-data",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y27EgF",
+                  "name": "Desktop Document Row - Фото для заявления",
+                  "width": "fill_container",
+                  "height": 66,
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YwYfU",
+                      "name": "Desktop Document Cell - Фото для заявления",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "n8KxpC",
+                          "name": "Desktop File Icon - Фото для заявления",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "file-text",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Aw2L3",
+                          "name": "Desktop Document Name - Фото для заявления",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Фото для заявления",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "a85UE9",
+                      "name": "Desktop Document Category - Фото для заявления",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 180,
+                      "content": "Медиа",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hY38X",
+                      "name": "Desktop Document Status - Фото для заявления",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Проверено",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cYv1K",
+                      "name": "Desktop Document Date - Фото для заявления",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "03.09",
+                      "fontFamily": "$font-data",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "INgOH",
+                  "name": "Desktop Document Row - Квитанция оплаты",
+                  "width": "fill_container",
+                  "height": 66,
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "b2UVJ",
+                      "name": "Desktop Document Cell - Квитанция оплаты",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "fvykI",
+                          "name": "Desktop File Icon - Квитанция оплаты",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "file-text",
+                          "library": "lucide",
+                          "fill": "$nav-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "G6U2Rc",
+                          "name": "Desktop Document Name - Квитанция оплаты",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Квитанция оплаты",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "gCmjX",
+                      "name": "Desktop Document Category - Квитанция оплаты",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 180,
+                      "content": "Финансы",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "eDsNl",
+                      "name": "Desktop Document Status - Квитанция оплаты",
+                      "fill": "$nav-ink",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Проверено",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Hjwrt",
+                      "name": "Desktop Document Date - Квитанция оплаты",
+                      "fill": "$nav-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "02.09",
+                      "fontFamily": "$font-data",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "d3jDJ",
+      "x": 1536,
+      "y": 456,
+      "name": "Mobile Dashboard Context",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$nav-panel",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hsI9v",
+          "name": "Mobile Screen Shell",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$nav-panel",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 24,
+          "children": [
+            {
+              "id": "K38R7F",
+              "type": "ref",
+              "ref": "n2E2hZ",
+              "name": "Mobile Navigation Instance",
+              "width": "fill_container",
+              "height": 300
+            },
+            {
+              "type": "frame",
+              "id": "AhGA6",
+              "name": "Mobile Current Section",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qN0gi",
+                  "name": "Mobile Section Eyebrow",
+                  "fill": "$nav-muted",
+                  "content": "Текущий раздел",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "FR0O2",
+                  "name": "Mobile Section Title",
+                  "fill": "$nav-ink",
+                  "content": "Иммиграция",
+                  "fontFamily": "$font-heading",
+                  "fontSize": 30,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "SfoZF",
+                  "name": "Mobile Section Description",
+                  "fill": "$nav-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Общие файлы семьи. Список ниже использует нейтральные названия документов.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a9VFI",
+              "name": "Mobile Status Summary",
+              "width": "fill_container",
+              "height": 72,
+              "fill": "$nav-surface",
+              "stroke": "$nav-line",
+              "strokeWidth": 1,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gzH0d",
+                  "name": "Mobile Status - Файлы",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x0ZkH6",
+                      "name": "Mobile Status Label - Файлы",
+                      "fill": "$nav-muted",
+                      "content": "Файлы",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yA0AO",
+                      "name": "Mobile Status Value - Файлы",
+                      "fill": "$nav-ink",
+                      "content": "24",
+                      "fontFamily": "$font-data",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wMyAD",
+                  "name": "Mobile Status - Действия",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "icv3K",
+                      "name": "Mobile Status Label - Действия",
+                      "fill": "$nav-muted",
+                      "content": "Действия",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "R6KDs",
+                      "name": "Mobile Status Value - Действия",
+                      "fill": "$nav-ink",
+                      "content": "3",
+                      "fontFamily": "$font-data",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dxNSj",
+                  "name": "Mobile Status - Сегодня",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "stroke": "$nav-soft-line",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gz09y",
+                      "name": "Mobile Status Label - Сегодня",
+                      "fill": "$nav-muted",
+                      "content": "Сегодня",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uIlsy",
+                      "name": "Mobile Status Value - Сегодня",
+                      "fill": "$nav-ink",
+                      "content": "2",
+                      "fontFamily": "$font-data",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "djqJC",
+              "name": "Mobile Document List",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EZEzN",
+                  "name": "Mobile Document Card - Скан паспорта",
+                  "width": "fill_container",
+                  "height": 66,
+                  "fill": "$nav-surface",
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": 1,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "p1zQ6P",
+                      "name": "Mobile Document Icon - Скан паспорта",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "file-text",
+                      "library": "lucide",
+                      "fill": "$nav-muted"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GZvrq",
+                      "name": "Mobile Document Text - Скан паспорта",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mQnJ8",
+                          "name": "Mobile Document Name - Скан паспорта",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Скан паспорта",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "o1vRWo",
+                          "name": "Mobile Document Status - Скан паспорта",
+                          "fill": "$nav-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Проверено",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "eoUjF",
+                      "name": "Mobile Document Chevron - Скан паспорта",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "chevron-right",
+                      "library": "lucide",
+                      "fill": "$nav-muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kcN0J",
+                  "name": "Mobile Document Card - Анкета заявления",
+                  "width": "fill_container",
+                  "height": 66,
+                  "fill": "$nav-surface",
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": 1,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "JEP3U",
+                      "name": "Mobile Document Icon - Анкета заявления",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "file-text",
+                      "library": "lucide",
+                      "fill": "$nav-muted"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w9pkm",
+                      "name": "Mobile Document Text - Анкета заявления",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F2nxK",
+                          "name": "Mobile Document Name - Анкета заявления",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Анкета заявления",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xfRaL",
+                          "name": "Mobile Document Status - Анкета заявления",
+                          "fill": "$nav-blue",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "К заполнению",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "o0komR",
+                      "name": "Mobile Document Chevron - Анкета заявления",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "chevron-right",
+                      "library": "lucide",
+                      "fill": "$nav-muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TumNG",
+                  "name": "Mobile Document Card - Подтверждение адреса",
+                  "width": "fill_container",
+                  "height": 66,
+                  "fill": "$nav-surface",
+                  "stroke": "$nav-soft-line",
+                  "strokeWidth": 1,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "BIfnu",
+                      "name": "Mobile Document Icon - Подтверждение адреса",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "file-text",
+                      "library": "lucide",
+                      "fill": "$nav-muted"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zKxo5",
+                      "name": "Mobile Document Text - Подтверждение адреса",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ahI6C",
+                          "name": "Mobile Document Name - Подтверждение адреса",
+                          "fill": "$nav-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Подтверждение адреса",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OEETk",
+                          "name": "Mobile Document Status - Подтверждение адреса",
+                          "fill": "$nav-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Ожидает",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "llKiC",
+                      "name": "Mobile Document Chevron - Подтверждение адреса",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "chevron-right",
+                      "library": "lucide",
+                      "fill": "$nav-muted"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "nav-bg": {
+      "type": "color",
+      "value": "#0A0A0A"
+    },
+    "nav-surface": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "nav-panel": {
+      "type": "color",
+      "value": "#F4F6F8"
+    },
+    "nav-ink": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "nav-muted": {
+      "type": "color",
+      "value": "#666666"
+    },
+    "nav-inverse": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "nav-blue": {
+      "type": "color",
+      "value": "#4A9FD8"
+    },
+    "nav-line": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "nav-soft-line": {
+      "type": "color",
+      "value": "#D7DDE2"
+    },
+    "font-heading": {
+      "type": "string",
+      "value": "Funnel Sans"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-caption": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "font-data": {
+      "type": "string",
+      "value": "IBM Plex Mono"
+    }
+  },
+  "fileToken": "b775e09b-fabd-4a2a-a26c-def08a0b6a7c"
+}
