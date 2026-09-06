@@ -1,0 +1,11 @@
+import { Check, FileText } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { cn } from "@/lib/utils";
+import { STATUS } from "../model/data";
+import type { DocumentItem } from "../model/types";
+
+export function DocumentList({documents,checked,onToggle}:{documents:DocumentItem[];checked:Record<string,boolean>;onToggle:(id:string)=>void}){
+  return <section className="mt-5 overflow-hidden border border-line-strong bg-surface"><div className="hidden grid-cols-[1fr_180px_170px_70px] bg-ink px-5 py-3 text-[11px] font-bold text-on-dark md:grid"><span>Документ</span><span>Категория</span><span>Статус</span><span className="text-right">Готово</span></div>
+    <AnimatePresence mode="popLayout" initial={false}>{documents.length===0?<motion.p key="empty" initial={{opacity:0}} animate={{opacity:1}} className="p-10 text-center text-sm text-muted">По этому запросу документов нет</motion.p>:documents.map(item=><motion.button layout key={item.id} initial={{opacity:0,y:6}} animate={{opacity:1,y:0}} exit={{opacity:0}} onClick={()=>onToggle(item.id)} className={cn("grid w-full gap-3 border-t border-line p-4 text-left first:border-t-0 md:grid-cols-[1fr_180px_170px_70px] md:items-center md:px-5",checked[item.id]?"bg-success-soft":"hover:bg-panel")}><span className="flex min-w-0 gap-3"><span className="mt-0.5 grid size-8 shrink-0 place-items-center border border-line-strong bg-surface"><FileText className="size-4"/></span><span className="min-w-0"><strong className={cn("block text-sm",checked[item.id]&&"line-through decoration-success")}>{item.title}</strong><span className="mt-1 block text-xs leading-5 text-muted">{item.note}</span></span></span><span className="pl-11 font-mono text-[10px] uppercase text-muted md:pl-0">{item.tag}</span><span className="pl-11 text-xs font-bold md:pl-0" style={{color:STATUS[item.status].color}}>{STATUS[item.status].title}</span><span className={cn("ml-11 grid size-7 place-items-center justify-self-start border md:ml-0 md:justify-self-end",checked[item.id]?"border-success bg-success text-white":"border-line-strong bg-surface")}>{checked[item.id]&&<Check className="size-4"/>}</span></motion.button>)}</AnimatePresence>
+  </section>;
+}
